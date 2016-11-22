@@ -6,9 +6,12 @@
 	<script type="text/javascript" src="js/fonctions.js"></script>
 	
 	<!-- Import CSS -->
-	<link type="text/css" rel="stylesheet" href="css/rocssti-fr.css"/>
+	<link type="text/css" rel="stylesheet" href="css/rocssti-fr.css"/>	
 </head>
 <body>
+	<?php
+	include("php/hearder.php");
+	?>
 	
 </body>
 </html>
