@@ -20,7 +20,7 @@
 					<li class="navigation__item col">
 						<div>
 							<a class="navigation__link zone" href="">
-								<span class="navigation__text">Test</span>
+								<span class="navigation__text">Test 1</span>
 							</a>
 						</div>
 					</li>

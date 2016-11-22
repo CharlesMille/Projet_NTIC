@@ -1,5 +1,7 @@
 @charset "UTF-8";
+
 /* UTF-8 déclaré avant toute chose */
+
 
 /******************************************************************
  * ROCSSTI : une base CSS par Nicolas Hoffmann https://rocssti.net/
@@ -42,151 +44,244 @@
  */
 
 
-
-
 /*
  *****************************************************************
  * 1 -- reset
  *****************************************************************
  */
 
+
 /* spécial HTML 5 */
-article, aside, datagrid, datalist, details, dialog, figure, footer, header, main, menu, nav, section { display: block; }
-audio, canvas, progress, video { display: inline-block; }
-abbr, eventsource, mark, meter, time, output, bb { display: inline; }
+
+article,
+aside,
+datagrid,
+datalist,
+details,
+dialog,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section {
+    display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+    display: inline-block;
+}
+
+abbr,
+eventsource,
+mark,
+meter,
+time,
+output,
+bb {
+    display: inline;
+}
+
 
 /* à commenter/fallback si vous vous souciez d’IE<8 */
-html { box-sizing: border-box; }
-*, *:before, *:after {
-  box-sizing: inherit;
+
+html {
+    box-sizing: border-box;
 }
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
 
 /* reset minimum */
-html, body, blockquote, ul, ol, form, button { margin: 0; padding: 0; }
-button { border: 0; }
-p, ul, ol, dl, blockquote, pre, td, th, label, textarea {
-  font-size: 1em; /* equiv 14px */
-  line-height: 1.5;
-  margin: 1.5em 0;
+
+html,
+body,
+blockquote,
+ul,
+ol,
+form,
+button {
+    margin: 0;
+    padding: 0;
 }
+
+button {
+    border: 0;
+}
+
+p,
+ul,
+ol,
+dl,
+blockquote,
+pre,
+td,
+th,
+label,
+textarea {
+    font-size: 1em;
+    /* equiv 14px */
+    line-height: 1.5;
+    margin: 1.5em 0;
+}
+
 
 /* fix display img/iframe */
-img,
-iframe { vertical-align: middle; }
 
-ul, ol { padding-left: 2em; }
+img,
+iframe {
+    vertical-align: middle;
+}
+
+ul,
+ol {
+    padding-left: 2em;
+}
 
 .unstyled {
-  padding-left: 0;
-  list-style-type: none;
+    padding-left: 0;
+    list-style-type: none;
 }
+
 
 /* la base correspond à 10px */
-html { 
-  font-size: 62.5%;
-  /* IE9-IE11 math fixing. Voir https://connect.microsoft.com/IE/feedback/details/816709/ */
-  /* Merci à @guardian, @victorbritopro, @eQRoeil & Knacss */
-  font-size: calc(1em * 0.625);
+
+html {
+    font-size: 62.5%;
+    /* IE9-IE11 math fixing. Voir https://connect.microsoft.com/IE/feedback/details/816709/ */
+    /* Merci à @guardian, @victorbritopro, @eQRoeil & Knacss */
+    font-size: calc(1em * 0.625);
 }
+
 body {
-  background: #fff;
-  color: #333;
-  font-family: Arial, sans-serif;
-  font-size: 1.4em; /* taille de base équiv à 14px */
-  line-height: 1.5; /* à corriger si besoin est */
+    background: #fff;
+    color: #333;
+    font-family: Arial, sans-serif;
+    font-size: 1.4em;
+    /* taille de base équiv à 14px */
+    line-height: 1.5;
+    /* à corriger si besoin est */
 }
-
-
 
 
 /*
  *****************************************************************
  * 02 -- ainsi font font font + structure Hx
  *****************************************************************
- */ 
+ */
+
 
 /*@font-face {
 
 }*/
+
 
 /* calculées via https://rocssti.net/builder-css
  * basé sur http://soqr.fr/vertical-rhythm/ merci @goetter & @eQRoeil */
 
 h1,
 .h1 {
-  display: block;
-  font-size: 1.85714em; /* equiv 26px */
-  line-height: 1.61538;
-  margin: 0 0 .80769em 0;
+    display: block;
+    font-size: 1.85714em;
+    /* equiv 26px */
+    line-height: 1.61538;
+    margin: 0 0 .80769em 0;
 }
+
 h2,
 .h2 {
-  display: block;
-  font-size: 1.71429em; /* equiv 24px */
-  line-height: 1.75;
-  margin: 0 0 .875em 0;
+    display: block;
+    font-size: 1.71429em;
+    /* equiv 24px */
+    line-height: 1.75;
+    margin: 0 0 .875em 0;
 }
+
 h3,
 .h3 {
-  display: block;
-  font-size: 1.57143em; /* equiv 22px */
-  line-height: 1.90909;
-  margin: 0 0 .95455em 0;
+    display: block;
+    font-size: 1.57143em;
+    /* equiv 22px */
+    line-height: 1.90909;
+    margin: 0 0 .95455em 0;
 }
+
 h4,
 .h4 {
-  display: block;
-  font-size: 1.42857em; /* equiv 20px */
-  line-height: 1.05;
-  margin: 0 0 1.05em 0;
+    display: block;
+    font-size: 1.42857em;
+    /* equiv 20px */
+    line-height: 1.05;
+    margin: 0 0 1.05em 0;
 }
+
 h5,
 .h5 {
-  display: block;
-  font-size: 1.28571em; /* equiv 18px */
-  line-height: 1.16667;
-  margin: 0 0 1.16667em 0;
+    display: block;
+    font-size: 1.28571em;
+    /* equiv 18px */
+    line-height: 1.16667;
+    margin: 0 0 1.16667em 0;
 }
+
 h6,
 .h6 {
-  display: block;
-  font-size: 1.14286em; /* equiv 16px */
-  line-height: 1.3125;
-  margin: 0 0 1.3125em 0;
+    display: block;
+    font-size: 1.14286em;
+    /* equiv 16px */
+    line-height: 1.3125;
+    margin: 0 0 1.3125em 0;
 }
 
 .uppercase {
-  text-transform: uppercase;
+    text-transform: uppercase;
 }
+
 
 /* autres classes utiles */
+
 .smaller {
-  font-size: .71429em; /* equiv 10px */
-  line-height: 2.1;
-  margin: 2.1em 0;
+    font-size: .71429em;
+    /* equiv 10px */
+    line-height: 2.1;
+    margin: 2.1em 0;
 }
+
 .small {
-  font-size: .85714em; /* equiv 12px */
-  line-height: 1.75;
-  margin: 1.75em 0;
+    font-size: .85714em;
+    /* equiv 12px */
+    line-height: 1.75;
+    margin: 1.75em 0;
 }
+
 .big {
-  font-size: 1.14286em; /* equiv 16px */
-  line-height: 1.3125;
-  margin: 1.3125em 0;
+    font-size: 1.14286em;
+    /* equiv 16px */
+    line-height: 1.3125;
+    margin: 1.3125em 0;
 }
+
 .bigger {
-  font-size: 1.28571em; /* equiv 18px */
-  line-height: 1.16667;
-  margin: 1.16667em 0;
+    font-size: 1.28571em;
+    /* equiv 18px */
+    line-height: 1.16667;
+    margin: 1.16667em 0;
 }
+
 .biggest {
-  font-size: 1.42857em; /* equiv 20px */
-  line-height: 1.05;
-  margin: 1.05em 0;
+    font-size: 1.42857em;
+    /* equiv 20px */
+    line-height: 1.05;
+    margin: 1.05em 0;
 }
-
-
 
 
 /*
@@ -196,7 +291,10 @@ h6,
  */
 
 .noborder,
-iframe { border: 0; }
+iframe {
+    border: 0;
+}
+
 
 /*
  * repris de http://tinytypo.tetue.net/ de @tetue
@@ -204,55 +302,69 @@ iframe { border: 0; }
  *
  * voir http://en.wikipedia.org/wiki/International_variation_in_quotation_marks pour les références
  */
+
 q {
-  quotes: "\201C" "\201D" "\2018" "\2019";
+    quotes: "\201C" "\201D" "\2018" "\2019";
 }
-:lang(fr) > q {
-  quotes: "\00AB\A0" "\A0\00BB" "\201C" "\201D" "\2018" "\2019";
+
+:lang(fr)>q {
+    quotes: "\00AB\A0" "\A0\00BB" "\201C" "\201D" "\2018" "\2019";
 }
-:lang(en) > q {
-  quotes: "\201C" "\201D" "\2018" "\2019";
+
+:lang(en)>q {
+    quotes: "\201C" "\201D" "\2018" "\2019";
 }
-:lang(es) > q {
-  quotes: "\00AB" "\00BB" "\201C" "\201D";
+
+:lang(es)>q {
+    quotes: "\00AB" "\00BB" "\201C" "\201D";
 }
-:lang(it) > q {
-  quotes: "\00AB\A0" "\A0\00BB" "\201C" "\201D";
+
+:lang(it)>q {
+    quotes: "\00AB\A0" "\A0\00BB" "\201C" "\201D";
 }
-:lang(de) > q {
-  quotes: "\201e" "\201c" "\201a" "\2018";
+
+:lang(de)>q {
+    quotes: "\201e" "\201c" "\201a" "\2018";
 }
+
 q:before {
-  content: open-quote;
+    content: open-quote;
 }
+
 q:after {
-  content: close-quote;
+    content: close-quote;
 }
+
 
 /* éviter interlignage disgracieux */
+
 sup,
 sub {
-  vertical-align: 0;
-  position: relative;
+    vertical-align: 0;
+    position: relative;
 }
+
 sup {
-  bottom: 1ex;
+    bottom: 1ex;
 }
+
 sub {
-  top: .5ex;
+    top: .5ex;
 }
-
-
-
 
 
 /* éviter marges supplémentaires sur éléments imbriqués */
+
 li p,
 li ul {
-  margin-bottom: 0;
-  margin-top: 0;
+    margin-bottom: 0;
+    margin-top: 0;
 }
+
+
 /* Vous ne passerez PAS (Gandalf) */
+
+
 /*textarea,
 table,
 td,
@@ -262,57 +374,77 @@ pre,
 samp,
 div,
 p,*/
+
 .cut {
-  word-wrap: break-word;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  -o-hyphens: auto;
-  hyphens: auto;
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -o-hyphens: auto;
+    hyphens: auto;
 }
+
+
 /* pour supprimer la césure si besoin */
+
 .nocut {
-  word-wrap: normal;
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  -o-hyphens: none;
-  hyphens: none;
+    word-wrap: normal;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    -o-hyphens: none;
+    hyphens: none;
 }
 
 code,
 pre,
 samp {
-  white-space: pre-wrap;
+    white-space: pre-wrap;
 }
+
 code {
-  line-height: 1;
+    line-height: 1;
 }
+
 kbd {
-  border: solid 1px;
-  border-top-left-radius: .5em;
-  border-top-right-radius: .5em;
-  padding: 0 .25em;
+    border: solid 1px;
+    border-top-left-radius: .5em;
+    border-top-right-radius: .5em;
+    padding: 0 .25em;
 }
+
 table {
-  margin-bottom: 1.5em;
-  table-layout: fixed;
+    margin-bottom: 1.5em;
+    table-layout: fixed;
 }
+
+
 /* j’y tiens, les abbr c’est bon pour la planète */
+
+
 /* seuls ceux ayant un title sont signalés */
+
 abbr[title] {
-  border-bottom: dotted 1px; 
-  cursor: help;
-  text-decoration: none;
-  /* couleur héritée du texte */
-} 
+    border-bottom: dotted 1px;
+    cursor: help;
+    text-decoration: none;
+    /* couleur héritée du texte */
+}
+
 
 /* alignements de textes */
-.alignright  { text-align: right; }
-.aligncenter { text-align: center; }
-.alignleft   { text-align: left; }
 
+.alignright {
+    text-align: right;
+}
 
+.aligncenter {
+    text-align: center;
+}
+
+.alignleft {
+    text-align: left;
+}
 
 
 /*
@@ -321,58 +453,82 @@ abbr[title] {
  *****************************************************************
  */
 
+
 /* Liens */
+
 a {
-  color: #2573be;
-  cursor: pointer;
+    color: #2573be;
+    cursor: pointer;
 }
+
+
 /* penser au focus */
+
 a:focus,
 a:hover,
 a:active {
-  color: #000;
+    color: #000;
 }
+
+
 /* éviter la bordure sur une image comprise dans un lien + fix bordure image IE */
+
 a:link img,
-a:visited img, 
+a:visited img,
 img {
-  border-style: none;
+    border-style: none;
 }
 
 .nodecoration {
-  text-decoration: none;
+    text-decoration: none;
 }
+
 
 /* liens avec icônes, on peut utiliser les DATA-URI */
 
+
 /* pour signaler liens externes */
+
+
 /*a[href^="http://"],
 a[href^="https://"] {
 
 }*/
+
+
 /* si URL complète sur un lien interne, virer signalement liens externes */
+
+
 /*a[href^="http://www.mondomaine.com"] {
 
 }*/
+
+
 /* contact, liens mailto */
+
+
 /*.mail,
 a[href^="mailto:"] {
 
 }*/
+
+
 /* dont l’URL se termine par .pdf ou ce que vous voulez comme extension */
+
+
 /*a[href$=".pdf"] {
 
 }*/
 
+
 /* facto icons */
+
+
 /*[class*=icon-30] {
   display: inline-block;
   width: 30px;
   height: 30px;
 }*/
-
-
-
 
 
 /*
@@ -381,12 +537,14 @@ a[href^="mailto:"] {
  *****************************************************************
  */
 
+
 /**
  * layout
  */
 
 
 /* ça dépend, ça dépasse */
+
 img,
 table,
 td,
@@ -396,34 +554,47 @@ pre,
 textarea,
 input,
 svg {
-  height: auto;
-  max-width: 100%;
+    height: auto;
+    max-width: 100%;
 }
+
+
 /* pas de reset sur embed, object et video, ça fait foirer certains players */
 
+
 /* utile pour gérer les floattants */
+
+
 /* contient des floats */
-.mod { 
-  overflow: auto;
-}
-.mod--hidden,
-.no-scroll { 
-  overflow: hidden;
+
+.mod {
+    overflow: auto;
 }
 
-/* quelques floattants */
-.left {
-  float: left;
+.mod--hidden,
+.no-scroll {
+    overflow: hidden;
 }
+
+
+/* quelques floattants */
+
+.left {
+    float: left;
+}
+
 .right {
-  float: right;
+    float: right;
 }
 
 
 /* clearer les floats */
+
 .clear {
-  clear: both;
+    clear: both;
 }
+
+
 /*
 .clearleft {
   clear: left;
@@ -432,6 +603,8 @@ svg {
   clear: right;
 }
 */
+
+
 /*
 .clearhidden {
   clear: both;
@@ -440,6 +613,8 @@ svg {
   visibility: hidden;
 }
 */
+
+
 /*
 .clearfix:after {
   content: ".";
@@ -451,182 +626,391 @@ svg {
 */
 
 
-
 /* gouttière */
+
 .gut {
-  height: 1px;
+    height: 1px;
 }
+
 
 /* gestion du table-design en CSS */
+
 .row {
-  display: table;
-  table-layout: fixed;
+    display: table;
+    table-layout: fixed;
 }
+
 .inline-row {
-  display: inline-table;
-  table-layout: fixed;
+    display: inline-table;
+    table-layout: fixed;
 }
+
 .line {
-  display: table-row;
+    display: table-row;
 }
+
 .col {
-  display: table-cell;
-  vertical-align: top;
+    display: table-cell;
+    vertical-align: top;
 }
+
 .col-noalign {
-  display: table-cell;
+    display: table-cell;
 }
+
 
 /* alignements */
-.aligntop    { vertical-align: top; }
-.alignbottom { vertical-align: bottom; }
-.alignmiddle { vertical-align: middle; }
+
+.aligntop {
+    vertical-align: top;
+}
+
+.alignbottom {
+    vertical-align: bottom;
+}
+
+.alignmiddle {
+    vertical-align: middle;
+}
+
 
 /* block */
+
 .bl {
-  display: block;
+    display: block;
 }
+
 
 /* inline-block, utile pour les grilles et pas seulement */
+
 .inbl,
 .grid {
-  display: inline-block;
+    display: inline-block;
 }
+
 
 /* grid = élément d’une inline-grid */
+
 .grid {
-  vertical-align: top;
+    vertical-align: top;
 }
+
 
 /* pour relativiser */
+
 .relative {
-  position: relative;
+    position: relative;
 }
+
 
 /* bloc centré */
+
 .center {
-  margin-left: auto;
-  margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+
 /* activation de l’accélération matérielle */
+
 .hardware-accelerated {
-  -webkit-transform: translateZ(0);
-  -moz-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  -o-transform: translateZ(0);
-  transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
 }
 
 
 /* largeurs de blocks */
-.w1   { width: 1%; }
-.w2   { width: 2%; }
-.w3   { width: 3%; }
-.w5   { width: 5%; }
-.w10  { width: 10%; }
-.w20  { width: 20%; }
-.w25  { width: 25%; }
-.w30  { width: 30%; }
-.w33  { width: 33.333%; }
-.w40  { width: 40%; }
-.w45  { width: 45%; }
-.w49  { width: 49%; }
-.w50  { width: 50%; }
-.w60  { width: 60%; }
-.w66  { width: 66.666%; }
-.w70  { width: 70%; }
-.w75  { width: 75%; }
-.w80  { width: 80%; }
-.w90  { width: 90%; }
-.w100 { width: 100%; }
+
+.w1 {
+    width: 1%;
+}
+
+.w2 {
+    width: 2%;
+}
+
+.w3 {
+    width: 3%;
+}
+
+.w5 {
+    width: 5%;
+}
+
+.w10 {
+    width: 10%;
+}
+
+.w20 {
+    width: 20%;
+}
+
+.w25 {
+    width: 25%;
+}
+
+.w30 {
+    width: 30%;
+}
+
+.w33 {
+    width: 33.333%;
+}
+
+.w40 {
+    width: 40%;
+}
+
+.w45 {
+    width: 45%;
+}
+
+.w49 {
+    width: 49%;
+}
+
+.w50 {
+    width: 50%;
+}
+
+.w60 {
+    width: 60%;
+}
+
+.w66 {
+    width: 66.666%;
+}
+
+.w70 {
+    width: 70%;
+}
+
+.w75 {
+    width: 75%;
+}
+
+.w80 {
+    width: 80%;
+}
+
+.w90 {
+    width: 90%;
+}
+
+.w100 {
+    width: 100%;
+}
+
 
 /* ici ajouter les largeurs en em */
+
+
 /*.w960e { width: 60em; }*/
 
+
 /* ici ajouter les largeurs en pixels */
+
+
 /*.w500p { width: 500px; }*/
 
+
 /* ici ajouter les largeurs max en em */
+
+
 /*.mw960e { max-width: 60em; }*/
 
+
 /* ici ajouter les largeurs max en pixels */
+
+
 /*.mw960p { max-width: 960px; }*/
 
-/* margins */
-.mt0 { margin-top: 0; }
-.mt1 { margin-top: 1em; }
-.mt2 { margin-top: 2em; }
-.mr0 { margin-right: 0; }
-.mr1 { margin-right: 1em; }
-.mr2 { margin-right: 2em; }
-.mb0 { margin-bottom: 0; }
-.mb1 { margin-bottom: 1em; }
-.mb2 { margin-bottom: 2em; }
-.ml0 { margin-left: 0; }
-.ml1 { margin-left: 1em; }
-.ml2 { margin-left: 2em; }
-.m0  { margin: 0; }
-.m1  { margin: 1em; }
-.m2  { margin: 2em; }
 
+/* margins */
+
+.mt0 {
+    margin-top: 0;
+}
+
+.mt1 {
+    margin-top: 1em;
+}
+
+.mt2 {
+    margin-top: 2em;
+}
+
+.mr0 {
+    margin-right: 0;
+}
+
+.mr1 {
+    margin-right: 1em;
+}
+
+.mr2 {
+    margin-right: 2em;
+}
+
+.mb0 {
+    margin-bottom: 0;
+}
+
+.mb1 {
+    margin-bottom: 1em;
+}
+
+.mb2 {
+    margin-bottom: 2em;
+}
+
+.ml0 {
+    margin-left: 0;
+}
+
+.ml1 {
+    margin-left: 1em;
+}
+
+.ml2 {
+    margin-left: 2em;
+}
+
+.m0 {
+    margin: 0;
+}
+
+.m1 {
+    margin: 1em;
+}
+
+.m2 {
+    margin: 2em;
+}
 
 
 /* paddings */
-.pt0 { padding-top: 0; }
-.pt1 { padding-top: 1em; }
-.pt2 { padding-top: 2em; }
-.pr0 { padding-right: 0; }
-.pr1 { padding-right: 1em; }
-.pr2 { padding-right: 2em; }
-.pb0 { padding-bottom: 0; }
-.pb1 { padding-bottom: 1em; }
-.pb2 { padding-bottom: 2em; }
-.pl0 { padding-left: 0; }
-.pl1 { padding-left: 1em; }
-.pl2 { padding-left: 2em; }
-.p0  { padding: 0; }
-.p1  { padding: 1em; }
-.p2  { padding: 2em; }
 
+.pt0 {
+    padding-top: 0;
+}
+
+.pt1 {
+    padding-top: 1em;
+}
+
+.pt2 {
+    padding-top: 2em;
+}
+
+.pr0 {
+    padding-right: 0;
+}
+
+.pr1 {
+    padding-right: 1em;
+}
+
+.pr2 {
+    padding-right: 2em;
+}
+
+.pb0 {
+    padding-bottom: 0;
+}
+
+.pb1 {
+    padding-bottom: 1em;
+}
+
+.pb2 {
+    padding-bottom: 2em;
+}
+
+.pl0 {
+    padding-left: 0;
+}
+
+.pl1 {
+    padding-left: 1em;
+}
+
+.pl2 {
+    padding-left: 2em;
+}
+
+.p0 {
+    padding: 0;
+}
+
+.p1 {
+    padding: 1em;
+}
+
+.p2 {
+    padding: 2em;
+}
 
 
 /* spécial hr de 1px de haut */
+
 hr {
-  background-color: #000;
-  border: 0;
-  color: #000;
-  height: 1px;
-  margin: 0 0 1em;
-  padding: 0;
+    background-color: #000;
+    border: 0;
+    color: #000;
+    height: 1px;
+    margin: 0 0 1em;
+    padding: 0;
 }
+
 
 /* pour cacher du texte de manière accessible… toussââââ */
-.invisible {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-.nonvisible { visibility: hidden; }
 
-.hidden    { display: none; } /* caché partout */
-.nodesktop { display: none; } /* caché sur desktop */
+.invisible {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.nonvisible {
+    visibility: hidden;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* caché partout */
+
+.nodesktop {
+    display: none;
+}
+
+
+/* caché sur desktop */
+
+
 /*.noprint   {} /* caché sur print */
+
+
 /*.notablet  {} /* caché sur tablettes */
+
+
 /*.nomobile  {} /* caché sur mobile */
 
 
 /**
  * modules
  */
-
-
-
 
 
 /*
@@ -636,38 +1020,62 @@ hr {
  *****************************************************************
  */
 
+
 /* === page === */
+
 .page {
-  margin: 0 auto;
-  position: relative;
+    margin: 0 auto;
+    position: relative;
 }
+
 
 /* === skip links = liens d’évitement === */
-.skip {
 
-}
+.skip {}
+
+
 /* skip__link = un lien d’évitement  */
+
+
 /* idéalement mettez-les visibles pas uniquement au focus */
 .skip__link {
   text-decoration: none;
   color: white;
 }
+
 /* sinon pensez à les rendre visibles au focus */
+
 .skip__link:focus,
 .skip__link:hover,
+
 .skip__link:active {
   color: black;
 }
 
-
-
 /* === header === */
+
 .header {
-
+    background-color: #536b78;
 }
-.logo {
 
+#header a {
+    color: #f7f5f0;
 }
+
+#header a:focus,
+#header a:hover,
+#header a:active {
+    text-decoration: underline;
+}
+
+#header .h1 {
+    color: #f1f4f5;
+    font-weight: 550;
+    text-shadow: 0.01em 0.01em 0.02em #f1f4f5;
+}
+
+.logo {}
+
 .navigation {
   margin: auto;
 }
@@ -679,6 +1087,7 @@ hr {
   padding-bottom: 50em;
 }
 
+/* === contenu principal === */
 
 /* === footer === */
 .footer {
@@ -688,114 +1097,144 @@ hr {
   padding-bottom: 10em;
 }
 
-
-
-
 /*
  *****************************************************************
  * 07 -- forms
  *****************************************************************
  */
 
+
 /* donne envie de cliquer sur un bouton */
+
 label,
 button,
 input[type="submit"],
 input[type="button"],
 input[type="reset"] {
-  cursor: pointer;
+    cursor: pointer;
 }
 
+
 /* évite un resize potentiellement foireux */
+
 textarea {
-  resize: vertical;
+    resize: vertical;
 }
+
+
 /* supprime un bug Firefox sur button */
-button::-moz-focus-inner { border: 0; padding: 0; }
+
+button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
 
 label,
 button,
 input,
 select {
-  vertical-align: middle;
+    vertical-align: middle;
 }
 
+
 /** fix typo inputs **/
+
 input,
 select,
 textarea,
 optgroup,
 button {
-  font: inherit;
+    font: inherit;
 }
 
+
 /* à adapter selon le design voulu */
+
 input,
 select,
 textarea {
-  border: 1px solid #000;
-  border-radius: 5px;
-  padding: .5em;
-  width: 250px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: .5em;
+    width: 250px;
 }
+
 
 /* pour les textes des champs */
+
 .label {
-  display: inline-block;
+    display: inline-block;
 }
 
+
 /* à adapter selon le design voulu */
+
 .button {
-  background: #fff;
-  border-radius: 5px;
-  -webkit-box-shadow: 1px 1px 1px #ddd; 
-  box-shadow: 1px 1px 1px #ddd; 
-  color: #000;
+    background: #fff;
+    border-radius: 5px;
+    -webkit-box-shadow: 1px 1px 1px #ddd;
+    box-shadow: 1px 1px 1px #ddd;
+    color: #000;
 }
+
 
 /* 
  * évite dimensionnement des radios, checkboxes et images
  * et un affichage différent sous IE 
  */
+
 input[type="radio"],
 input[type="checkbox"],
 input[type="image"] {
-  background-color: transparent;
-  border: 0;
-  width: auto;
+    background-color: transparent;
+    border: 0;
+    width: auto;
 }
+
 
 /* pour annuler la taille des inputs ou autres */
+
 .auto {
-  width: auto;
+    width: auto;
 }
 
+
 /* messages d’erreur ou de confirmation */
+
 .alert,
 .alert input,
 .alert textarea,
 .alert select {
-  color: #bf0000;
-  font-weight: bold;
+    color: #bf0000;
+    font-weight: bold;
 }
+
+
 /* .redborder sert à débugger uniquement */
+
 .alert input,
 .alert textarea,
 .alert select,
 .redborder {
-  border: 1px solid #bf0000;
+    border: 1px solid #bf0000;
 }
+
 .alert img {
-  border: 0;
+    border: 0;
 }
+
+
 /*.ok {
 
 }*/
+
 
 /* 
  * peut être complété par les attributs HTML5 required
  * exemple avec une couleur, penser à ne pas uniquement transmettre l’info ainsi
  */
+
+
 /*select:required:invalid,
 input:required:invalid,
 input:focus:invalid,
@@ -813,18 +1252,14 @@ select:focus:required:valid {
 }*/
 
 
-
-
 /*
  *****************************************************************
  * 08 -- dans le contenu (contenus spécifiques aux pages)
  *****************************************************************
  */
 
+
 /* home */
-
-
-
 
 
 /*
@@ -834,46 +1269,38 @@ select:focus:required:valid {
  */
 
 
-
-
-
 /*
  *****************************************************************
  * 10 -- homo tablettes - breakpoint majeur
  *****************************************************************
- */ 
+ */
 
-@media (max-width: 47.9375em) { /* equiv 767px */
-   
-  /**
+@media (max-width: 47.9375em) {
+    /* equiv 767px */
+    /**
    * layout/modules
    */
-
-  /* affichage des éléments */
-  .nodesktop { display: block; }
-
-  /* cachage des éléments inutiles, chabitte ! */
-  .notablet { display: none; }
-  
-  /* linéarisation contenus flottants/table-layout */
-  .autotablet {
-    float: none;
-    display: block;
-    width: auto;
-  }
-
-  /**
+    /* affichage des éléments */
+    .nodesktop {
+        display: block;
+    }
+    /* cachage des éléments inutiles, chabitte ! */
+    .notablet {
+        display: none;
+    }
+    /* linéarisation contenus flottants/table-layout */
+    .autotablet {
+        float: none;
+        display: block;
+        width: auto;
+    }
+    /**
    * adaptation structure globale (page / skip links / header / contenu principal / footer)
    */
-  
-  
-  /**
+    /**
    * dans le contenu (contenus spécifiques aux pages)
    */
-
 }
-
-
 
 
 /*
@@ -883,47 +1310,38 @@ select:focus:required:valid {
  */
 
 
-
-
-
-
 /*
  *****************************************************************
  * 12 -- mobile - breakpoint majeur
  *****************************************************************
  */
 
-@media (max-width: 40em) { /* equiv 640px */
-
-  /**
+@media (max-width: 40em) {
+    /* equiv 640px */
+    /**
    * layout/modules
    */
-
-  /* affichage des éléments */
-  .notablet { display: block; }
-
-  /* cachage des éléments inutiles, chabitte ! */
-  .nomobile { display: none; }
-
-  /* linéarisation contenus flottants/table-layout */
-  .automobile {
-    float: none;
-    display: block;
-    width: auto;
-  }
-
-  /**
+    /* affichage des éléments */
+    .notablet {
+        display: block;
+    }
+    /* cachage des éléments inutiles, chabitte ! */
+    .nomobile {
+        display: none;
+    }
+    /* linéarisation contenus flottants/table-layout */
+    .automobile {
+        float: none;
+        display: block;
+        width: auto;
+    }
+    /**
    * adaptation structure globale (page / skip links / header / contenu principal / footer)
    */
-  
-  
-  /**
+    /**
    * dans le contenu (contenus spécifiques aux pages)
    */
-
 }
-
-
 
 
 /*
@@ -932,37 +1350,30 @@ select:focus:required:valid {
  *****************************************************************
  */
 
-@media (max-width: 20em) { /* equiv 320px */
-
-  /**
+@media (max-width: 20em) {
+    /* equiv 320px */
+    /**
    * layout/modules
    */
-
-  /* affichage des éléments */
-  /*.nomobile { display: block; }*/
-
-  /* cachage des éléments inutiles ! */
-  .notinymobile { display: none; }
-
-  /* linéarisation contenus flottants/table-layout */
-  .autotinymobile {
-    float: none;
-    display: block;
-    width: auto;
-  }
-
-  /**
+    /* affichage des éléments */
+    /*.nomobile { display: block; }*/
+    /* cachage des éléments inutiles ! */
+    .notinymobile {
+        display: none;
+    }
+    /* linéarisation contenus flottants/table-layout */
+    .autotinymobile {
+        float: none;
+        display: block;
+        width: auto;
+    }
+    /**
    * adaptation structure globale (page / skip links / header / contenu principal / footer)
    */
-  
-  
-  /**
+    /**
    * dans le contenu (contenus spécifiques aux pages)
    */
-
 }
-
-
 
 
 /*
@@ -972,67 +1383,65 @@ select:focus:required:valid {
  */
 
 @media print {
-  /** 
+    /** 
    * ajouter là-dedans les éléments qui ont besoin d’être
    * resetés de manière très bourrine pour le print
    */
-  body,
-  html,
-  .page,
-  .reset4print {
-    background-color: #fff;
-    background-image: none;
-    border: 0;
-    box-shadow: none;
-    color: #000;
-    float: none;
-    height: auto;
-    margin: 0;
-    max-width: 100%;
-    min-height: 0;
-    padding: 0;
-    position: static;
-    width: auto;
-  }
-
-  body {
-    padding: .5em;
-  }
-
-  /* cachage des éléments inutiles, chabitte ! */
-  .noprint {
-    display: none;
-  }
-  
-  /* affichage éléments spécifiques au print */
-  .onprint {
-    display: block;
-  }
-  
-  /* éviter saut de page hasardeux */
-  blockquote, ul, ol {
-    page-break-inside: avoid;
-  }
-  h1, h2, h3, caption {
-    page-break-after: avoid;
-  }
-  
-  /* affichage des liens, sauf pour image contenue */
-  /* attention, penser à vérifier le résultat et penser 
+    body,
+    html,
+    .page,
+    .reset4print {
+        background-color: #fff;
+        background-image: none;
+        border: 0;
+        box-shadow: none;
+        color: #000;
+        float: none;
+        height: auto;
+        margin: 0;
+        max-width: 100%;
+        min-height: 0;
+        padding: 0;
+        position: static;
+        width: auto;
+    }
+    body {
+        padding: .5em;
+    }
+    /* cachage des éléments inutiles, chabitte ! */
+    .noprint {
+        display: none;
+    }
+    /* affichage éléments spécifiques au print */
+    .onprint {
+        display: block;
+    }
+    /* éviter saut de page hasardeux */
+    blockquote,
+    ul,
+    ol {
+        page-break-inside: avoid;
+    }
+    h1,
+    h2,
+    h3,
+    caption {
+        page-break-after: avoid;
+    }
+    /* affichage des liens, sauf pour image contenue */
+    /* attention, penser à vérifier le résultat et penser 
    * à limiter cette possibilité aux liens dans le contenu */
-  /*a:after {
+    /*a:after {
     content: " (" attr(href) ") ";
   }
   a:after img {
     content: "";
   }*/
-
-  /* ici fix propriétés particulières */
-
-
-} /* end print */
+    /* ici fix propriétés particulières */
+}
 
 
+/* end print */
 
 
 /*
@@ -1040,6 +1449,7 @@ select:focus:required:valid {
  * 15 -- fix viewport
  *****************************************************************
  */
+
 
 /* fix viewport pour Win8 (snap mode) et préparer le jour 
  * où le viewport sera supporté par tous les moteurs 
@@ -1056,22 +1466,24 @@ select:focus:required:valid {
  */
 
 @-webkit-viewport {
-  width: device-width;
+    width: device-width;
 }
+
 @-moz-viewport {
-  width: device-width;
+    width: device-width;
 }
+
 @-ms-viewport {
-  width: device-width;
+    width: device-width;
 }
+
 @-o-viewport {
-  width: device-width;
+    width: device-width;
 }
+
 @viewport {
-  width: device-width;
+    width: device-width;
 }
-
-
 
 
 /*
@@ -1080,10 +1492,12 @@ select:focus:required:valid {
  *****************************************************************
  */
 
+
 /*
  * Règles d’état = mises en bas pour être prioritaires
  *
  */
+
 
 /*
 .is-hidden,
@@ -1093,13 +1507,12 @@ select:focus:required:valid {
 */
 
 
-
-
 /*
  *****************************************************************
  * 17 -- bonus : Fixes IE
  *****************************************************************
  */
+
 
 /*  
  * basé sur les classes conditionnelles sur l’élément HTML
@@ -1109,31 +1522,37 @@ select:focus:required:valid {
  *       
  */
 
+
 /* less than IE 9 */
+
 .oldies .nooldies {
-  display: none;
+    display: none;
 }
 
 .ie6 .noie6 {
-  display: none;
+    display: none;
 }
+
 .ie7 .noie7 {
-  display: none;
+    display: none;
 }
+
 .ie8 .noie8 {
-  display: none;
+    display: none;
 }
+
 .ie9 .noie9 {
-  display: none;
+    display: none;
 }
 
 .ie7 .col,
 .ie7 .col-noalign,
 .ie6 .col,
 .ie6 .col-noalign {
-  float: left;
+    float: left;
 }
+
 .ie7 .row,
 .ie6 .row {
-  overflow: auto;
+    overflow: auto;
 }
