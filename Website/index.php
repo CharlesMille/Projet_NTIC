@@ -10,10 +10,10 @@
 	<link type="text/css" rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
-	<?php include("contenu/header.php"); ?>
-	<br/>
+	<?php include("contenu/header.php"); ?>	
 	<div id="contenu" class="center mw1600e pl2 pr2 test">
 		<div class="main center relative">
+		<br/>
 			Test
 		</div>
 	</div>

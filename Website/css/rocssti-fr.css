@@ -1038,19 +1038,21 @@ hr {
 
 
 /* idéalement mettez-les visibles pas uniquement au focus */
+
 .skip__link {
-  text-decoration: none;
-  color: #536b78;
+    text-decoration: none;
+    color: #536b78;
 }
+
 
 /* sinon pensez à les rendre visibles au focus */
 
 .skip__link:focus,
 .skip__link:hover,
-
 .skip__link:active {
-  color: #f7f5f0;
+    color: #f7f5f0;
 }
+
 
 /* === header === */
 
@@ -1061,25 +1063,28 @@ hr {
 .logo {}
 
 .navigation {
-  margin: auto;
+    margin: auto;
 }
 
 
 /* === contenu principal === */
+
 .main {
-  margin: auto;
-  padding-bottom: 50em;
+    margin: auto;
+    padding-bottom: 50em;
 }
 
+
 /* === contenu principal === */
+
 
 /* === footer === */
+
 .footer {
-  margin: auto;
-  background-color: #536b78;
-  padding-top: 10em;
-  padding-bottom: 10em;
+    margin: auto;
+    background-color: #536b78;
 }
+
 
 /*
  *****************************************************************

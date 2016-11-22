@@ -1,14 +1,17 @@
-.test { background-color: #DDD; }
-
-.navigation__link {
-	text-decoration: none;
-	transition: 0.25s;
+.test {
+    background-color: #DDD;
 }
 
-.navigation__link:focus, .navigation__link:hover {
-	text-decoration: underline;
-	font-size: 1.08em;
-	transition: 0.25s;
+.navigation__link {
+    text-decoration: none;
+    transition: 0.25s;
+}
+
+.navigation__link:focus,
+.navigation__link:hover {
+    text-decoration: underline;
+    font-size: 1.08em;
+    transition: 0.25s;
 }
 
 .alignleft a {
@@ -25,4 +28,16 @@
     color: #f1f4f5;
     font-weight: 550;
     text-shadow: 0.01em 0.01em 0.02em #f1f4f5;
+}
+
+.footer__link {
+    text-decoration: none;
+    color: #f7f5f0;
+}
+
+.footer__link:focus,
+.footer__link:hover,
+.footer__link:active {
+    text-decoration: underline;
+    color: #f7f5f0
 }
