@@ -1,0 +1,22 @@
+.test { background-color: #DDD; }
+
+.zone {
+	padding: 1em 4em 1em 4em;
+
+	border: solid #AAA 1px;
+	text-decoration: none;
+
+	background-color: #EEE;
+	transition: 0.25s;
+}
+
+.zone:focus, .zone:hover {
+	background-color: #AAA;
+	transition: 0.25s;
+}
+
+hr {
+	background-color: #CCC;
+	margin-top : 1em;
+	margin-bottom : 1em;
+}

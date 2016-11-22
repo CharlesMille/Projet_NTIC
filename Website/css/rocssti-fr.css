@@ -649,13 +649,14 @@ hr {
 /* skip__link = un lien d’évitement  */
 /* idéalement mettez-les visibles pas uniquement au focus */
 .skip__link {
-
+  text-decoration: none;
+  color: white;
 }
 /* sinon pensez à les rendre visibles au focus */
 .skip__link:focus,
 .skip__link:hover,
 .skip__link:active {
-
+  color: black;
 }
 
 
@@ -668,19 +669,23 @@ hr {
 
 }
 .navigation {
-
+  margin: auto;
 }
 
 
 /* === contenu principal === */
 .main {
-
+  margin: auto;
+  padding-bottom: 50em;
 }
 
 
 /* === footer === */
 .footer {
-
+  margin: auto;
+  background-color: #333;
+  padding-top: 10em;
+  padding-bottom: 10em;
 }
 
 
