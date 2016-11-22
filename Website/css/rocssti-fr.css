@@ -1040,7 +1040,7 @@ hr {
 /* idéalement mettez-les visibles pas uniquement au focus */
 .skip__link {
   text-decoration: none;
-  color: white;
+  color: #536b78;
 }
 
 /* sinon pensez à les rendre visibles au focus */
@@ -1049,29 +1049,13 @@ hr {
 .skip__link:hover,
 
 .skip__link:active {
-  color: black;
+  color: #f7f5f0;
 }
 
 /* === header === */
 
 .header {
     background-color: #536b78;
-}
-
-#header a {
-    color: #f7f5f0;
-}
-
-#header a:focus,
-#header a:hover,
-#header a:active {
-    text-decoration: underline;
-}
-
-#header .h1 {
-    color: #f1f4f5;
-    font-weight: 550;
-    text-shadow: 0.01em 0.01em 0.02em #f1f4f5;
 }
 
 .logo {}
@@ -1092,7 +1076,7 @@ hr {
 /* === footer === */
 .footer {
   margin: auto;
-  background-color: #333;
+  background-color: #536b78;
   padding-top: 10em;
   padding-bottom: 10em;
 }

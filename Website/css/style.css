@@ -1,22 +1,28 @@
 .test { background-color: #DDD; }
 
-.zone {
-	padding: 1em 4em 1em 4em;
-
-	border: solid #AAA 1px;
+.navigation__link {
 	text-decoration: none;
-
-	background-color: #EEE;
 	transition: 0.25s;
 }
 
-.zone:focus, .zone:hover {
-	background-color: #AAA;
+.navigation__link:focus, .navigation__link:hover {
+	text-decoration: underline;
+	font-size: 1.08em;
 	transition: 0.25s;
 }
 
-hr {
-	background-color: #CCC;
-	margin-top : 1em;
-	margin-bottom : 1em;
+.alignleft a {
+    color: #f7f5f0;
+}
+
+#header a:focus,
+#header a:hover,
+#header a:active {
+    text-decoration: underline;
+}
+
+#header .h1 {
+    color: #f1f4f5;
+    font-weight: 550;
+    text-shadow: 0.01em 0.01em 0.02em #f1f4f5;
 }
