@@ -10,7 +10,7 @@
 </head>
 <body>
 	<?php
-	include("php/hearder.php");
+	include("php/header.php");
 	?>
 	
 </body>

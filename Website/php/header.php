@@ -1,5 +1,7 @@
 <header>
-    <h1>
-        Le handicap psychique
-    <h1>
+    <div class = "h1 alignmiddle">
+        Le handicap psychique            
+    </div>
+    <br/>
+    <ul 
 </header>
