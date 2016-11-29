@@ -75,3 +75,10 @@
 .btn:focus {
     background-color: #5faadc;
 }
+
+#boutonMenu {
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    width: 1.8em;
+}
