@@ -11,13 +11,13 @@
         	<img src="img/menu_icone.png" onclick="afficherTab();" id="boutonMenu" class="nodesktop" style="cursor: pointer;"></img>
         </div>                           
         <div class="grid h2 m1 notablet nomobile">
-        	<a class="navigation__link" href="">
+        	<a class="navigation__link" href="index.php">
         		<span>Accueil</span>
         	</a> 
         </div>
         <div class="grid h2 m1 notablet nomobile">
-        	<a class="navigation__link" href="">
-        		<span>Lien 1</span>
+        	<a class="navigation__link" href="formulaire.php">
+        		<span>Formulaires</span>
         	</a> 
         </div>
         <div class="grid h2 m1 notablet nomobile">
@@ -33,14 +33,14 @@
 
         <div id="tab" class="invisible">
             <div class="grid h2 m1 nodesktop">
-                <a class="navigation__link" href="">
+                <a class="navigation__link" href="index.php">
                     <span>Accueil</span>
                 </a> 
                 <br/>
             </div>
             <div class="grid h2 m1 nodesktop">
-                <a class="navigation__link" href="">
-                    <span>Lien 1</span>
+                <a class="navigation__link" href="formulaire.php">
+                    <span>Formulaires</span>
                 </a> 
                 <br/>
             </div>
