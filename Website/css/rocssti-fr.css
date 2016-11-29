@@ -169,6 +169,7 @@ body {
     /* taille de base équiv à 14px */
     line-height: 1.5;
     /* à corriger si besoin est */
+    min-height: 100%;
 }
 
 
@@ -1071,7 +1072,7 @@ hr {
 
 .main {
     margin: auto;
-    padding-bottom: 50em;
+    padding-bottom: 2em;
 }
 
 
@@ -1083,6 +1084,8 @@ hr {
 .footer {
     margin: auto;
     background-color: #536b78;
+    position:absolute;
+    width: 100%;
 }
 
 
