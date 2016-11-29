@@ -16,10 +16,10 @@
 			<br/>
 			<div id="rpg" class="row game p2">
 				<h2>Scénario</h2>
-				<div class="col left w50 center aligncenter">
+				<div class="col left w50 center aligncenter automobile autotablet">
 					<img src="" alt="Image"></img>
 				</div>
-				<div class="col left w50 justify">
+				<div class="col left w50 justify automobile autotablet">
 					<span>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis erat quam, sollicitudin in sapien sit amet, lacinia consectetur purus. Praesent consectetur ornare tempor. Suspendisse hendrerit et massa at vehicula. Proin condimentum fringilla felis, id tempus velit lobortis quis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis commodo dui nec elit aliquam semper. Sed non mauris sed nisi consectetur elementum. Fusce in magna elit. Duis aliquam lacus non sapien pulvinar vestibulum. Mauris congue nunc vel congue feugiat. Proin mollis sem mattis lacus tristique, ut commodo nisi dapibus. Morbi id magna leo. Praesent fermentum non ante quis tempus. Fusce vestibulum est magna, quis lacinia tellus lobortis tempor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque placerat ut turpis et imperdiet.
 						Fusce ut dui vel massa convallis varius dictum sit amet quam. Vestibulum congue euismod odio a ullamcorper. Suspendisse nunc lacus, semper a enim nec, maximus congue ligula. Donec porttitor velit et nunc tristique interdum. Ut ultrices nunc at turpis hendrerit tincidunt. Proin sollicitudin vitae ex nec feugiat. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec eu neque erat. Cras interdum lectus eget scelerisque posuere. Ut et felis et justo tincidunt eleifend. Donec eget nulla a felis lobortis placerat et vitae quam. Fusce arcu risus, fermentum eget posuere vitae, tempor sit amet turpis. Aliquam elementum ex eget tincidunt imperdiet. Phasellus ac bibendum tellus. Aenean sit amet neque eget massa cursus cursus.
@@ -27,11 +27,22 @@
 					</span>
 				</div>
 			</div>
-			<div class="game">
+
+			<!-- On Desktop -->
+			<div class="game nomobile notablet noprint">
 				<div class="row center p2">
 					<div class="col left w33"><button class="btn">Expliquer à la caissière que vous avez oublié votre carte bleue dans la voiture.</button></div>
 					<div class="col left w33"><button class="btn">Expliquer à la caissière que vous avez oublié votre carte bleue dans la voiture.</button></div>
 					<div class="col left w33"><button class="btn">Expliquer à la caissière que vous avez oublié votre carte bleue dans la voiture.</button></div>
+				</div>
+			</div>
+
+			<!-- On Mobile and Tablet -->
+			<div class="game nodesktop">
+				<div class="row center p2">
+					<div class="col left w100"><button class="btn">Expliquer à la caissière que vous avez oublié votre carte bleue dans la voiture.</button></div>
+					<div class="col left w100"><button class="btn">Expliquer à la caissière que vous avez oublié votre carte bleue dans la voiture.</button></div>
+					<div class="col left w100"><button class="btn">Expliquer à la caissière que vous avez oublié votre carte bleue dans la voiture.</button></div>
 				</div>
 			</div>
 		</div>
