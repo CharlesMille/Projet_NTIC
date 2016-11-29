@@ -10,13 +10,13 @@
         	<span>Le handicap psychique</span>
         </div>                           
         <div class="grid h2 m1">
-        	<a class="navigation__link" href="">
+        	<a class="navigation__link" href="index.php">
         		<span>Accueil</span>
         	</a> 
         </div>
         <div class="grid h2 m1">
-        	<a class="navigation__link" href="">
-        		<span>Lien 1</span>
+        	<a class="navigation__link" href="formulaire.php">
+        		<span>Formulaires</span>
         	</a> 
         </div>
         <div class="grid h2 m1">

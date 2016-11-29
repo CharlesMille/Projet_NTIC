@@ -41,3 +41,8 @@
     text-decoration: underline;
     color: #f7f5f0
 }
+
+.label {
+    font-size: 1em;
+    text-align: left;
+}
