@@ -16,12 +16,12 @@
 			<br/>
 			<h1>Ajouter une nouvelle page :</h1>
 			<br/> 
-			<form method = "post">
-			<table calss ="w100">
+			<form method = "post" runat ="server">
+			<table class ="w100">
 				<tr>
-					<td>
+					<td class = "w30">
 						<label class = "label" >
-							Titre :
+							 Titre : 
 						</label>
 					</td>
 					<td>
@@ -29,19 +29,22 @@
 					</td>
 				</tr>
 				<tr>
-					<td>
+					<td class = "w30">
 						<label class = "label" >
-							Image :
+							 Image : 
 						</label>
 					</td>
+					<td class = "w100">
+						<input type="file" name = "image_page" id="input_image_page"/>						
+					</td>
 					<td>
-						<input type="file" name = "image_page" id="input_image_page"/>
+						<img id="img" src="#" alt="your image"/>
 					</td>
 				</tr>
 				<tr>
-					<td>
+					<td class = "w30">
 						<label class = "label" >
-							Texte d'écrivant la situation :
+							 Texte d'écrivant la situation : 
 						</label> 
 					</td>
 					<td>
