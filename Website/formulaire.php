@@ -8,6 +8,7 @@
 	<script type="text/javascript" src="js/fonctions.js"></script>
 	
 	<!-- Import CSS -->
+	<link type="text/css" rel="stylesheet" href="css/jquery-ui.css"/>
 	<link type="text/css" rel="stylesheet" href="css/rocssti-fr.css"/>
 	<link type="text/css" rel="stylesheet" href="css/style.css"/>
 </head>
