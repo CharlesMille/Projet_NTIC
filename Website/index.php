@@ -3,9 +3,12 @@
 	<title>Projet NTIC</title>
 
 	<!-- IMPORT JS -->
+	<script type="text/javascript" src="js/libs/jquery.min.js"></script>
+	<script type="text/javascript" src="js/libs/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="js/fonctions.js"></script>
 	
 	<!-- Import CSS -->
+	<link type="text/css" rel="stylesheet" href="css/jquery-ui.css"/>
 	<link type="text/css" rel="stylesheet" href="css/rocssti-fr.css"/>
 	<link type="text/css" rel="stylesheet" href="css/style.css"/>
 </head>

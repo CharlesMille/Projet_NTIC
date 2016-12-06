@@ -10,17 +10,27 @@ function afficherTab() {
 
 function readURL(input) {
 
+    console.log("Here");
     if (input.files && input.files[0]) {
         var reader = new FileReader();
 
         reader.onload = function(e) {
-            $('#img').attr('src', e.target.result);
+            $("#image").attr("src", e.target.result);
         }
 
         reader.readAsDataURL(input.files[0]);
     }
 }
 
-$("#input_image_page").change(function() {
+$("#img").change(function() {
     readURL(this);
 });
+
+function addChampText() {
+
+    var nb = document.getElementById("nbbtn");
+
+    for (i = 0; i < nb; i++) {
+        console.log(i);
+    }
+}

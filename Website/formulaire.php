@@ -3,6 +3,8 @@
 	<title>Ajouter une nouvelle page</title>
 
 	<!-- IMPORT JS -->
+	<script type="text/javascript" src="js/libs/jquery.min.js"></script>
+	<script type="text/javascript" src="js/libs/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="js/fonctions.js"></script>
 	
 	<!-- Import CSS -->
@@ -12,89 +14,27 @@
 <body>
 	<?php include("contenu/header.php"); ?>	
 	<div id="contenu" class="center mw1600e pl2 pr2 content">
-		<div class="main center relative">
-			<br/>
-			<h1>Ajouter une nouvelle page :</h1>
-			<br/> 
-			<form method = "post" runat ="server">
-			<table class ="w100">
-				<tr>
-					<td class = "w30">
-						<label class = "label" >
-							 Titre : 
-						</label>
-					</td>
-					<td>
-						<input type="text" name = "titre_page" id="input_title_page"/>
-					</td>
-				</tr>
-				<tr>
-					<td class = "w30">
-						<label class = "label" >
-							 Image : 
-						</label>
-					</td>
-					<td class = "w100">
-						<input type="file" name = "image_page" id="input_image_page"/>						
-					</td>
-					<td>
-						<img id="img" src="#" alt="your image"/>
-					</td>
-				</tr>
-				<tr>
-					<td class = "w30">
-						<label class = "label" >
-							 Texte d'écrivant la situation : 
-						</label> 
-					</td>
-					<td>
-						<textarea name = "description_text_page" id="input_description_text_page"></textarea>
-					</td>
-				</tr>
-				<tr>
-					<td>Titre :</td>
-					<td>Titre :</td>
-				</tr>
-				<tr>
-					<td>Titre :</td>
-					<td>Titre :</td>
-				</tr>
-			</table>
-				<!--<div class = "row w100">
-					<div class="col  alignmiddle w5">
-						<label class = "label" >
-							Titre :
-						</label>   
-					</div>
-					<div class="col w1 gut"> </div>
-					<div class="col aligneft alignmiddle w40 ">
-						<input type="text" name = "titre_page" id="input_title_page"/>
-					</div>
-				</div>
-				<div class = "row w100">
-					<div class="col alignmiddle w5">
-						<label class = "label" >
-							Image :
-						</label>   
-					</div>
-					<div class="col w1 gut"> </div>
-					<div class="col alignleft alignmiddle w40">
-						<input type="file" name = "image_page" id="input_image_page"/>
-					</div>
-				</div>
-				<div class = "row w100">
-					<div class="col alignmiddle w5">
-						<label class = "label" >
-							Texte d'écrivant la situation :
-						</label> 
-					</div>
-				</div>
-				<div class = "row w100">
-					<div class="w100 aligncenter alignleft">										
-						<textarea name = "description_text_page" id="input_description_text_page"></textarea>
-					</div>					
-				</div>-->
-
+		<div class="main">
+			<h1 class="p1">Ajouter une nouvelle page :</h1>
+			<form method="POST" action=""  runat="server">
+				<label for="titre" class="row bl">
+					<span class="inbl w15 alignright pr1">Titre :</span>
+					<input class="w80" type="text" name="titre" id="titre" placeholder="Titre"/>
+				</label>
+				<label for="image" class="row bl">
+					<span class="inbl w15 alignright pr1">Image :</span>
+					<input class="w80" type="file" name="image" id="image"/>
+					<br/>
+					<img id="img" src="#" alt ="Image" class="inbl w15 alignright pr1"/>					
+				</label>												
+				<label for="situation" class="row bl">
+					<span class="inbl w15 alignright pr1">Texte décrivant une situation :</span><br/>
+					<textarea class="w100" tname="situation" id="situation"></textarea>
+				</label>
+				<label for="NbChoix" class="row bl">
+					<span class="inbl w15 alignright pr1">Nombre de choix :</span>
+					<input type="number" name="HowMany" value ="0" max ="10" min ="0" id="nbbtn" onchange="addChampText();"/>
+				</label>
 			</form> 
 		</div>
 	</div>
