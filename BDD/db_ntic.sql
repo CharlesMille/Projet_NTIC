@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mar 06 Décembre 2016 à 16:43
+-- Généré le :  Mer 11 Janvier 2017 à 18:16
 -- Version du serveur :  10.1.13-MariaDB
 -- Version de PHP :  5.6.23
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `db_ntic`
 --
-CREATE DATABASE IF NOT EXISTS `db_ntic` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+CREATE DATABASE IF NOT EXISTS `db_ntic` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE `db_ntic`;
 
 -- --------------------------------------------------------
@@ -33,14 +33,9 @@ CREATE TABLE `bouton` (
   `id_bouton` int(11) NOT NULL,
   `id_page` int(11) NOT NULL,
   `go_to_page` int(11) NOT NULL,
-  `texte` varchar(500) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `texte` varchar(500) CHARACTER SET latin1 NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Vider la table avant d'insérer `bouton`
---
-
-TRUNCATE TABLE `bouton`;
 -- --------------------------------------------------------
 
 --
@@ -54,17 +49,9 @@ CREATE TABLE `page` (
   `numero` int(11) NOT NULL,
   `texte` varchar(5000) NOT NULL,
   `image` varchar(500) DEFAULT NULL,
-  `bouton1` int(11) DEFAULT NULL,
-  `bouton2` int(11) DEFAULT NULL,
-  `bouton3` int(11) DEFAULT NULL,
-  `bouton4` int(11) DEFAULT NULL
+  `titre` varchar(100) CHARACTER SET utf8 NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Vider la table avant d'insérer `page`
---
-
-TRUNCATE TABLE `page`;
 -- --------------------------------------------------------
 
 --
@@ -74,14 +61,10 @@ TRUNCATE TABLE `page`;
 DROP TABLE IF EXISTS `scenario`;
 CREATE TABLE `scenario` (
   `id_scenario` int(11) NOT NULL,
-  `nom` varchar(500) CHARACTER SET utf8 NOT NULL
+  `nom` varchar(500) CHARACTER SET utf8 NOT NULL,
+  `resume` varchar(5000) CHARACTER SET utf8 DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Vider la table avant d'insérer `scenario`
---
-
-TRUNCATE TABLE `scenario`;
 --
 -- Index pour les tables exportées
 --
@@ -112,17 +95,17 @@ ALTER TABLE `scenario`
 -- AUTO_INCREMENT pour la table `bouton`
 --
 ALTER TABLE `bouton`
-  MODIFY `id_bouton` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_bouton` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT pour la table `page`
 --
 ALTER TABLE `page`
-  MODIFY `id_page` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_page` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT pour la table `scenario`
 --
 ALTER TABLE `scenario`
-  MODIFY `id_scenario` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_scenario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

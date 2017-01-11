@@ -1,5 +1,7 @@
 $ = jQuery;
 
+
+
 function afficherTab() {
 
     if (document.getElementById("tab").className == "invisible")
@@ -28,11 +30,11 @@ function putImage() {
 //Ajout de champs de texte
 function addChampText() {
 
-    var nb = document.form.nbbtn.value;
+    var nb = parseInt(document.getElementById("nbbtn").value);
     document.getElementById("textRep").innerHTML = '';
-    for (i = 0; i < nb; i++) {        
-        var boxName="rep"+i;
-        var placeholder = "Réponse "+i;         
-        document.getElementById("textRep").innerHTML+= '<div class = "rep"><label for="titre" class="row bl"><span class="inbl w15 alignright pr1">'+placeholder+' :</span><input class="w80" type="text" name="'+boxName+'" id="'+boxName+'" placeholder="'+placeholder+'"/></label><label for="titre" class="row bl"><span class="inbl w15 alignright pr1">Lien :</span><Select class="w80"><Option value = "1">1</Option><Option value = "2">2</Option><Option value = "3">3</Option></Select> <label for="poid" class="row bl"><span class="inbl w15 alignright pr1">Poid du choix :</span><input type="number" name="poid" value ="0" max ="10" min ="0" id="poid'+i+'"/></label></div>';
+    for (i = 1; i < nb + 1; i++) {        
+        var boxName="rep";
+        var placeholder = "Réponse " + i;         
+        document.getElementById("textRep").innerHTML+= '<div class = "rep"><label for="titre" class="row bl"><span class="inbl w15 alignright pr1">'+placeholder+' :</span><input class="w80" type="text" name="'+boxName+'[]" id="'+boxName+'" placeholder="'+placeholder+'"/></label><label for="titre" class="row bl"><span class="inbl w15 alignright pr1">Lien :</span><Select class="w80" name="goToPage[]"><Option value = "1">1</Option><Option value = "2">2</Option><Option value = "3">3</Option></Select> <label for="poids" class="row bl"><span class="inbl w15 alignright pr1">Poids du choix :</span><input type="number" name="poids[]" value ="0" max ="10" min ="0" id="poids'+i+'"/></label></div>';
     }    
 }

@@ -1,44 +1,39 @@
 <?php
+	session_start();
 	require_once("db.php");
 
-	/*$result = $conn->query("SELECT COUNT(*) count FROM page;");
+	$idScenario = $_SESSION['id'];
+	$titre = $_POST['titre'];
+	$situation = $_POST['situation'];
+	$nbBoutons = $_POST['nbBoutons'];
+	$numero = $_POST['numero'];
+
 	$idPage = -1;
 
+	$request = 'INSERT INTO page (id_scenario, numero, titre, texte) VALUES (?, ?, ?, ?);';
+	$stmt = $conn->prepare($request);
+	$stmt->bind_param("iiss", $idScenario, $numero, $titre, $situation);
+	$stmt->execute();
+
+	$selectID = 'SELECT id_page as id, titre FROM page GROUP BY id_page ORDER BY id_page DESC;';
+	$result = $conn->query($selectID);
+
 	if ($result->num_rows > 0) 
-	    while($row = $result->fetch_assoc())
-	        $idPage = $row["count"] + 1;
+		while($row = $result->fetch_assoc())
+	    {
+    		$idPage = $row['id'];
+    		break;
+	    }
 
-	$idScenario = $_POST['id_scenario'];
-	$numero = $_POST['numero'];
-	$texte = $_POST['texte'];
-	$image = $_POST['image'];*/
-
-	for ($i = 1; $i <= 4; ++$i)
+	for ($i = 0; $i < $nbBoutons; $i++)
 	{
-		eval('$bouton = (isset($_GET["go_to_page'.$i.'"])) ? $_GET["go_to_page'.$i.'"] : null;');
-
-		if ($bouton != null)
-		{
-			echo "Coucou";
-		}
-		else
-		{
-			echo "Non.";
-		}
+		$request = 'INSERT INTO bouton (id_page, go_to_page, texte) VALUES (?, ?, ?);';
+		$stmt = $conn->prepare($request);
+		$stmt->bind_param("iis", $idPage, $_POST['goToPage'][$i], $_POST['rep'][$i]);
+		$stmt->execute();
 	}
 
-	/*
-		Ajouter les boutons en BDD, et stocker les IDs dans $boutonNb
-	*/
-/*
-	$bouton1 = $idBouton1;
-	$bouton2 = $idBouton2;
-	$bouton3 = $idBouton3;
-	$bouton4 = $idBouton4;
+	$conn->close();
 
-	$query = 'INSERT INTO page (idScenario, numero, texte, image, bouton1, bouton2, bouton3, bouton4) VALUES (?, ?, ?, ?, ?, ?, ?, ?);';
-
-	$stmt = $conn->prepare($query);
-	$stmt->bind_param("iissssss", $idScenario, $numero, $texte, $image, $bouton1, $bouton2, $bouton3, $bouton4);
-	$stmt->execute();*/
+	header("Location: ../FormulaireAjoutPage.php");
 ?>
