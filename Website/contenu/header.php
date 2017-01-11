@@ -17,12 +17,12 @@
         </div>
         <div class="grid h2 m1 notablet nomobile">
         	<a class="navigation__link" href="formulaireAjoutScenario.php">
-        		<span>Formulaires</span>
+        		<span>Ajout d'un scénario</span>
         	</a> 
         </div>
         <div class="grid h2 m1 notablet nomobile">
-        	<a class="navigation__link" href="">
-        		<span>Lien 2</span>
+        	<a class="navigation__link" href="listeScenarios.php">
+        		<span>Liste des scénarios</span>
         	</a> 
         </div>
         <div class="grid h2 m1 notablet nomobile">

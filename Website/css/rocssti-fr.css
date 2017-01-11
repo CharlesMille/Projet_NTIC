@@ -1178,7 +1178,7 @@ textarea {
  * évite dimensionnement des radios, checkboxes et images
  * et un affichage différent sous IE 
  */
-
+button,
 input[type="radio"],
 input[type="checkbox"],
 input[type="image"] {
