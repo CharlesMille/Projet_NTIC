@@ -25,5 +25,5 @@
 
 	$conn->close();
 
-    header("Location: ../FormulaireAjoutPage.php");
+    header("Location: ../ajoutPage.php");
 ?>

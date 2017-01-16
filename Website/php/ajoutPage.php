@@ -35,5 +35,5 @@
 
 	$conn->close();
 
-	header("Location: ../FormulaireAjoutPage.php");
+	echo "OK";
 ?>

@@ -1,62 +1,35 @@
-<header id="header"  class="header">
-	<div class="skip m0 p0 noprint nomobile">
-		<a class="skip__link" href="#navigation">Navigation</a>
-		<span class="invisible"> | </span>
-		<a class="skip__link" href="#contenu">Contenu</a>
-	</div>
+<?php
+  $path = $_SERVER['PHP_SELF'];
+  $file = basename ($path);
+  $nom = explode('.', $file)[0];
+?>
+<div>
+    <a class="abs" href="#navigation">Navigation</a>
+    <a class="abs" href="#contenu">Contenu</a>
+</div>
 
-    <div id="navigation" class="navigation alignleft">
-        <div class="grid h1 m1 pr2">
-            <span>Le handicap psychique</span>
-        	<img src="img/menu_icone.png" onclick="afficherTab();" id="boutonMenu" class="nodesktop" style="cursor: pointer;"></img>
-        </div>                           
-        <div class="grid h2 m1 notablet nomobile">
-        	<a class="navigation__link" href="index.php">
-        		<span>Accueil</span>
-        	</a> 
-        </div>
-        <div class="grid h2 m1 notablet nomobile">
-        	<a class="navigation__link" href="formulaireAjoutScenario.php">
-        		<span>Ajout d'un scénario</span>
-        	</a> 
-        </div>
-        <div class="grid h2 m1 notablet nomobile">
-        	<a class="navigation__link" href="listeScenarios.php">
-        		<span>Liste des scénarios</span>
-        	</a> 
-        </div>
-        <div class="grid h2 m1 notablet nomobile">
-        	<a class="navigation__link" href="">
-        		<span>Lien 3</span>
-        	</a> 
-        </div>
-
-        <div id="tab" class="invisible">
-            <div class="grid h2 m1 nodesktop">
-                <a class="navigation__link" href="index.php">
-                    <span>Accueil</span>
-                </a> 
-                <br/>
-            </div>
-            <div class="grid h2 m1 nodesktop">
-                <a class="navigation__link" href="formulaire.php">
-                    <span>Formulaires</span>
-                </a> 
-                <br/>
-            </div>
-            <div class="grid h2 m1 nodesktop">
-                <a class="navigation__link" href="">
-                    <span>Lien 2</span>
-                </a> 
-                <br/>
-            </div>
-            <div class="grid h2 m1 nodesktop">
-                <a class="navigation__link" href="">
-                    <span>Lien 3</span>
-                </a> 
-                <br/>
-            </div>
-            <br/>
-        </div>
+<nav class="navbar navbar-default header">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.php">Le handicap psychologique</a>
     </div>
-</header>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li <?php if ($nom == "index") echo 'class="active"'; ?>><a href="index.php">Accueil</a></li>
+        <li <?php if ($nom == "ajoutScenario") echo 'class="active"'; ?>><a href="ajoutScenario.php">Ajout d'un scénario</a></li>
+        <li <?php if ($nom == "listeScenario") echo 'class="active"'; ?>><a href="listeScenario.php">Liste des scénarios</a></li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right vcenter">
+        <li><a href="https://www.ensc.fr/" style="padding: 0px;" data-toggle="tooltip" title="Site de l'ENSC"><img src="img/bordeaux_inp_ensc.png" width="70px" alt="Logo ENSC"/></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

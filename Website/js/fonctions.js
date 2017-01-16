@@ -1,6 +1,6 @@
 $ = jQuery;
 
-
+var src, target, fr;
 
 function afficherTab() {
 
@@ -12,9 +12,17 @@ function afficherTab() {
 
 //On va chercher l'image pour la placer sur la fenêtre
 function showImage(src,target) {
-  var fr=new FileReader();
   // when image is loaded, set the src of the image where you want to display it
   fr.onload = function(e) { target.src = this.result; };
+ 
+}
+
+function init()
+{
+  fr = new FileReader();
+  src = document.getElementById('image');
+  target = document.getElementById('img');
+
   src.addEventListener("change",function() {
     // fill fr with image data    
     fr.readAsDataURL(src.files[0]);
@@ -22,8 +30,6 @@ function showImage(src,target) {
 }
 
 function putImage() {
-    var src = document.getElementById('image');
-    var target = document.getElementById('img');
     showImage(src,target);
 }
 
@@ -31,10 +37,10 @@ function putImage() {
 function addChampText() {
 
     var nb = parseInt(document.getElementById("nbbtn").value);
-    document.getElementById("textRep").innerHTML = '';
-    for (i = 1; i < nb + 1; i++) {        
-        var boxName="rep";
-        var placeholder = "Réponse " + i;         
-        document.getElementById("textRep").innerHTML+= '<div class = "rep"><label for="titre" class="row bl"><span class="inbl w15 alignright pr1">'+placeholder+' :</span><input class="w80" type="text" name="'+boxName+'[]" id="'+boxName+'" placeholder="'+placeholder+'"/></label><label for="titre" class="row bl"><span class="inbl w15 alignright pr1">Lien :</span><Select class="w80" name="goToPage[]"><Option value = "1">1</Option><Option value = "2">2</Option><Option value = "3">3</Option></Select> <label for="poids" class="row bl"><span class="inbl w15 alignright pr1">Poids du choix :</span><input type="number" name="poids[]" value ="0" max ="10" min ="0" id="poids'+i+'"/></label></div>';
-    }    
+    document.getElementById("boutons").innerHTML = '<div class="panel-group" id="accordion">';
+
+    for (i = 1; i < nb + 1; i++) {
+        document.getElementById("boutons").innerHTML += '<div class="panel panel-default"> <div class="panel-heading"> <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#btn' + i + '">Bouton ' + i + '</a> </h4> </div> <div id="btn' + i + '" class="panel-collapse collapse ' + (i == 1 ? 'in' : '') + '"> <div class="panel-body"> <br/> <div class="form-group"> <label class="control-label col-sm-2">Réponse ' + i + ' :</label> <div class="col-lg-6 col-sm-6 col-12"> <input class="form-control" name="rep[]" type="text" placeholder="Réponse ' + i + '"/> </div> </div> <div class="form-group"> <label class="control-label col-sm-2">Lien vers la page du scénario n° :</label> <div class="col-lg-6 col-sm-6 col-12"> <input class="form-control" name="goToPage[]" type="number" value="0" min="0"/> </div> </div> </div> </div> </div>'; }
+
+    document.getElementById("boutons").innerHTML += '</div>';  
 }

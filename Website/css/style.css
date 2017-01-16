@@ -1,111 +1,42 @@
-.navigation__link {
+.header a
+{
+    /*background-color: #536b78;*/
+    font-size: 1.3em;
+}
+
+
+.header a:link, .header li a:link
+{
     text-decoration: none;
-    transition: 0.25s;
+    /*color: white;*/
 }
 
-.navigation__link:focus,
-.navigation__link:hover {
-    text-decoration: underline;
-    font-size: 1.08em;
-    transition: 0.25s;
-}
-
-.alignleft a {
-    color: #f7f5f0;
-}
-
-#header a:focus,
-#header a:hover,
-#header a:active {
-    text-decoration: underline;
-}
-
-#header .h1 {
-    color: #f1f4f5;
-    font-weight: 550;
-    text-shadow: 0.01em 0.01em 0.02em #f1f4f5;
-}
-
-.footer__link {
-    text-decoration: none;
-    color: #f7f5f0;
-}
-
-.footer__link:focus,
-.footer__link:hover,
-.footer__link:active {
-    text-decoration: underline;
-    color: #f7f5f0
-}
-
-.label {
-    font-size: 1em;
-    text-align: left;
-}
-
-.content {
-    background-color: #DDD;
-}
-
-.game {
-    background-color: white;
-}
-
-.center {
-    margin: auto;
-}
-
-.red {
-    background-color: red;
-}
-
-.green {
-    background-color: green;
-}
-
-.justify {
-    text-align: justify;
-}
-
-.btn {
-    background-color: #acd3ed;
-    color: black;
-    padding: 1em 5em 1em 5em;
-    margin: 0.5em 1em 0.5em 1em;
-    font-size: 1.2em;
-}
-
-.btn:hover,
-.btn:active,
-.btn:focus {
-    background-color: #5faadc;
-}
-
-#boutonMenu {
-    position: absolute;
-    right: 1em;
-    top: 1em;
-    width: 1.8em;
-}
-
-table {
-    font-weight: 500;
-}
-
-img 
+.active
 {
-    max-height: 10%;
-    max-width: 20%; 
+    /*background-color: red;*/
 }
 
-.rep 
+.footer
 {
-    border-style: solid;
-    border-width: .1em;
-    border-color: black;
-}
-
-.white
-{
+    padding: 1em;
     color: white;
+    margin: auto;
+    background-color: #536b78;
+    position:absolute;
+    width: 100%;
+    font-size: 1.5em;
+}
+
+.abs
+{
+    position: absolute;
+}
+
+.btnScenar
+{
+    padding: 1em 1em 1em 1em;
+    min-height: 5em;
+    display: inline-block;
+    text-align: center;
+    white-space: normal;
 }
