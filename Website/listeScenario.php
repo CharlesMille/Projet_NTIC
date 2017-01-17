@@ -26,7 +26,8 @@
 		<br/>
 		<div id="liste">
 		<?php
-			if ($result->num_rows > 0) 
+			if ($result->num_rows > 0)
+			{
 				while($row = $result->fetch_assoc())
 			    {
 		?>
@@ -35,17 +36,24 @@
 						<h4><?php echo $row['nom']; ?></h4>
 					</div>
 
-					<div class="col-sm-3">
-						<input class="btn btn-lg btn-block btn-info" type="button" value="Sélectionner" onclick="window.location='index.php?scenario=<?php echo $row['id_scenario']; ?>'"/>
+					<div class="col-sm-2">
+						<input class="btn btn-lg btn-block btn-success" type="button" value="Sélectionner" onclick="window.location='index.php?scenario=<?php echo $row['id_scenario']; ?>'"/>
 					</div>
 
-					<div class="col-sm-3">
-						<input type="button" class="btn btn-lg btn-block btn-info" value="Editer"/>
+					<div class="col-sm-2">
+						<input type="button" class="btn btn-lg btn-block btn-info" value="Editer" onclick="window.location='editionScenario.php?scenario=<?php echo $row['id_scenario']; ?>'"/>
+					</div>
+
+					<div class="col-sm-2">
+						<input type="button" class="btn btn-lg btn-block btn-danger" id="supprimer" value="Supprimer" onclick="window.location='php/supprimerScenario.php?scenario=<?php echo $row['id_scenario']; ?>'"/>
 					</div>
 				</div>
 				<hr/>
 		<?php
 			    }
+			}
+			else
+				echo "Aucun scénario n'a été créé.";
 		?>
 		</div>
 	</div>

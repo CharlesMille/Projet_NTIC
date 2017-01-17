@@ -20,13 +20,13 @@
 	</div>
 	<?php include("contenu/header.php"); ?>	
 	<div class="container">
-		<h3>Ajouter un nouveau scénario :</h3>
+		<h3>Ajouter une page au scénario :</h3>
 		<br/>
 		<form class="form-horizontal" role="form" enctype="multipart/form-data" method="POST" action="php/ajoutPage.php" id="formPage">
 			<div class="form-group">
 				<label class="control-label col-sm-2" for="titre">Titre :</label>
 				<div class="col-lg-6 col-sm-6 col-12">
-					<input class="form-control" id="titre" name="titre" type="text" placeholder="Titre du scénario"/>
+					<input class="form-control" id="titre" name="titre" type="text" placeholder="Titre de la page"/>
 				</div>
 			</div>
 
@@ -55,7 +55,7 @@
 
 			<hr/>
 
-			<h3>Choix pour le scénario</h3>
+			<h3>Choix : lien vers les autres pages</h3>
 			<br/>
 			<div class="form-group">
 				<label class="control-label col-sm-2" for="nbChoix">Nombre de choix :</label>
