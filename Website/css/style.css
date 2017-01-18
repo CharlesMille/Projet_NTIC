@@ -1,42 +1,42 @@
-.header a
-{
+.header a {
     /*background-color: #536b78;*/
     font-size: 1.3em;
 }
 
-
-.header a:link, .header li a:link
-{
+.header a:link,
+.header li a:link {
     text-decoration: none;
     /*color: white;*/
 }
 
-.active
-{
+.active {
     /*background-color: red;*/
 }
 
-.footer
-{
+.footer {
     padding: 1em;
     color: white;
     margin: auto;
     background-color: #536b78;
-    position:absolute;
+    position: absolute;
     width: 100%;
     font-size: 1.5em;
 }
 
-.abs
-{
+.abs {
     position: absolute;
 }
 
-.btnScenar
-{
+.btnScenar {
     padding: 1em 1em 1em 1em;
     min-height: 5em;
     display: inline-block;
     text-align: center;
     white-space: normal;
+}
+
+img {
+    max-width: 80%;
+    margin-right: 2em;
+    margin-bottom: 1.5em;
 }

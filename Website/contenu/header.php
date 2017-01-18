@@ -24,7 +24,7 @@
       <ul class="nav navbar-nav">
         <li <?php if ($nom == "index") echo 'class="active"'; ?>><a href="index.php">Accueil</a></li>
         <li <?php if ($nom == "ajoutScenario") echo 'class="active"'; ?>><a href="ajoutScenario.php">Ajout d'un scénario</a></li>
-        <li <?php if ($nom == "listeScenario") echo 'class="active"'; ?>><a href="listeScenario.php">Liste des scénarios</a></li>
+        <li <?php if ($nom == "listeScenario") echo 'class="active"'; ?>><a href="listeScenario.php">Liste des scénarios</a></li>        
       </ul>
 
       <ul class="nav navbar-nav navbar-right vcenter">
