@@ -37,7 +37,7 @@
 					</div>
 
 					<div class="col-sm-2">
-						<input class="btn btn-lg btn-block btn-success" type="button" value="Sélectionner" onclick="window.location='pageScenario.php?scenario=<?php echo $row['id_scenario']; ?>'"/>
+						<input class="btn btn-lg btn-block btn-success" type="button" value="Sélectionner" onclick="window.location='pageScenario.php?scenario=<?php echo $row['id_scenario']; ?>&page=1'"/>
 					</div>
 
 					<div class="col-sm-2">
