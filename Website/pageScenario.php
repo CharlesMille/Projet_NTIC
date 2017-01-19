@@ -35,7 +35,8 @@
 					while($rowPage = $resultPage->fetch_assoc())
 					{
 		?>
-		<h2>Titre de la page : <?php echo $rowPage['titre']?></h2>
+		<h3><?php echo $rowPage['titre']?></h3>
+		</br>
 		<div class="row">
 			<div class="col-sm-6">
 				<img class = "scenar" src="<?php echo $rowPage['image']?>" alt="Image"></img>
@@ -47,6 +48,7 @@
 				</span>
 			</div>
         </div>
+		</br>
 		<?php
 		$selectButton = 'SELECT * FROM bouton WHERE id_page ='.$rowPage['id_page'].';';
 		$resultButton = $conn->query($selectButton);
@@ -75,13 +77,22 @@
 		}
 		?>		
 		<?php
-		if($i%2 == 1)
-		{
-			?>
-			</div>
-				</div>
-				<?php
-		}
+						if($i%2 == 1)
+						{
+							?>
+							</div>
+								</div>
+								<?php
+						}else if($i ==0)
+						{
+							?>
+							<div class = "row">
+								<div class="col-sm-12">
+									<input type="button" class="btn btn-lg btn-block btn-danger" id="retour" value="Retour à l'accueil" onclick="window.location='index.php'"/>
+								</div>
+							</div>
+							<?php
+						}
 					}
 				}
 			}?>
