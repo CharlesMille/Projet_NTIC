@@ -28,7 +28,7 @@
 	<div class="container">
 		<h3>Edition de la page</h3>
 		<br/>
-		<form class="form-horizontal" method="POST" action="php/editerPage.php">
+		<form class="form-horizontal" method="POST" id="formPage" action="php/editerPage.php">
 		<?php
 			if ($result->num_rows > 0)
 			{
@@ -60,22 +60,29 @@
 		<?php
 			$selectBouton = 'SELECT * FROM bouton WHERE id_page = '.$_GET['page'].';';
 			$resultBouton = $conn->query($selectBouton);
+			$i = 1;
 
 			if ($resultBouton->num_rows > 0)
 			{
 				while($rowBouton = $resultBouton->fetch_assoc())
 			    {
-
 		?>
 				<div class="row">
-					<div class="col-sm-6">
-						<h4><?php echo $rowBouton['texte']; ?></h4>
+					<h3>Bouton n°<?php echo $i++; ?></h3>
+					<div class="col-sm-4">
+						<h4><input class="form-control" name="nomBouton[]" value="<?php echo $rowBouton['texte']; ?>"/></h4>
 					</div>
 
+					<div class="col-sm-3">
+						<h4>Envoie vers la page n°</h4>
+					</div>
+
+					<div class="col-sm-1">
+						<h4><input class="form-control" type="number" name="goTo[]" value="<?php echo $rowBouton['go_to_page']; ?>"/></h4>
+					</div>
 				</div>
 				<hr/>
 		<?php
-
 			    }
 			}
 			else
@@ -88,7 +95,7 @@
 				</div>
 
 				<div class="col-sm-8">
-					<input class="btn btn-lg btn-block btn-primary" type="submit" value="Valider les modifications"/>
+					<input class="btn btn-lg btn-block btn-primary" id="modifier" value="Valider les modifications"/>
 				</div>
 			</div>
 		<?php
@@ -108,6 +115,27 @@
 <script>
 	$(document).ready (function(){
 	    $("#success-alert").hide();
-	    
+	    $("#modifier").click(function(e) {
+	    		e.stopImmediatePropagation();
+
+	    		$.post(
+	    			"php/editerPage.php", 
+	    			$("#formPage").serialize(),
+			       	function(response) {
+			       		if (response == "OK")
+			       		{
+			       			$("#success-alert").alert();
+					        $("#success-alert").fadeTo(2000, 500).slideUp(500, function() {
+					       		$("#success-alert").slideUp(500);
+					        });
+			       		}
+			       		else
+			       		{
+			       			alert("Erreur");
+			       		}
+			       	}
+			    );
+		    }
+		);
  	});
 </script>

@@ -88,7 +88,7 @@
 				</div>
 
 				<div class="col-sm-8">
-					<input class="btn btn-lg btn-block btn-primary" type="submit" id="modifier" value="Valider les modifications"/>
+					<input class="btn btn-lg btn-block btn-primary" id="modifier" value="Valider les modifications"/>
 				</div>
 			</div>
 		<?php
