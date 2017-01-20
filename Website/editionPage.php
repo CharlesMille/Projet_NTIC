@@ -2,6 +2,8 @@
 	require_once("php/db.php");
 	$request = 'SELECT * FROM page WHERE id_page = '.$_GET['page'].';';
 	$result = $conn->query($request);
+
+	$scenario = -1;
 ?>
 
 <!DOCTYPE html>
@@ -34,6 +36,7 @@
 			{
 				while($row = $result->fetch_assoc())
 			    {
+			    	$scenario = $row['id_scenario'];
 		?>
 			<input class="invisible abs" name="idPage" value="<?php echo $_GET['page']; ?>"/>
 			<div class="form-group">
@@ -94,7 +97,7 @@
 
 			<div class="row">
 				<div class="col-sm-4">
-					<input class="btn btn-lg btn-block btn-danger" type="button" value="Annuler" onclick="window.location='listeScenario.php'"/>
+					<input class="btn btn-lg btn-block btn-danger" type="button" value="Annuler" onclick="window.location='editionScenario.php?scenario=<?php echo $scenario; ?>'"/>
 				</div>
 
 				<div class="col-sm-8">

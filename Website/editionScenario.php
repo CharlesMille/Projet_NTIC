@@ -50,8 +50,10 @@
 				</div>
 			</div>
 			<br/>
+			<input class="btn btn-lg btn-block btn-primary" value="Ajouter une page au scénario" onclick="window.location='ajoutPage.php?scenario=<?php echo $_GET['scenario']; ?>'"/>
+			<br/>
 		<?php
-			$selectPage = 'SELECT * FROM page WHERE id_scenario = '.$_GET['scenario'].';';
+			$selectPage = 'SELECT * FROM page WHERE id_scenario = '.$_GET['scenario'].' ORDER BY numero ASC;';
 			$resultPage = $conn->query($selectPage);
 
 			if ($resultPage->num_rows > 0)
@@ -70,7 +72,7 @@
 					</div>
 
 					<div class="col-sm-3">
-						<input type="button" class="btn btn-lg btn-block btn-danger" id="supprimer" value="Supprimer" onclick="window.location='php/supprimerPage.php?page=<?php echo $rowPage['id_page']; ?>'"/>
+						<input type="button" class="btn btn-lg btn-block btn-danger" id="supprimer" value="Supprimer" onclick="window.location='php/supprimerPage.php?page=<?php echo $rowPage['id_page']; ?>&scenario=<?php echo $_GET['scenario']; ?>'"/>
 					</div>
 				</div>
 				<hr/>

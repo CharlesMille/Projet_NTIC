@@ -5,6 +5,8 @@
 	$titre = $_POST['titre'];
 	$situation = $_POST['situation'];
 
+	$scenario = -1;
+
 	$request = 'INSERT INTO scenario (nom, resume) VALUES (?, ?);';
 	$stmt = $conn->prepare($request);
 	$stmt->bind_param("ss", $titre, $situation);
@@ -18,12 +20,12 @@
 	    {
 	    	if ($row['nom'] == $titre)
 	    	{
-	    		$_SESSION['id'] = $row['id'];
+	    		$scenario = $row['id'];
 	    		break;
 	    	}	
 	    }
 
 	$conn->close();
 
-    header("Location: ../ajoutPage.php");
+    header("Location: ../ajoutPage.php?scenario=".$scenario);
 ?>

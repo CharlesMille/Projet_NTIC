@@ -6,5 +6,10 @@
 	$stmt->bind_param("i", $_GET['page']);
 	$stmt->execute();
 
-	header("Location: ../listeScenario.php");
+	$sql = 'DELETE FROM bouton WHERE id_page = ?';
+	$stmt = $conn->prepare($sql);
+	$stmt->bind_param("i", $_GET['page']);
+	$stmt->execute();
+
+	header("Location: ../editionScenario.php?scenario=".$_GET['scenario']);
 ?>
