@@ -1,7 +1,11 @@
 <?php
 
-	define('TARGET','/ressources/');
-	$tabExt('jpg','gif','png','jpeg');
+	define('TARGET','ressources/');
+	define('MAX_SIZE', 100000000);    // Taille max en octets du fichier
+	define('WIDTH_MAX', 2200);    // Largeur max de l'image en pixels
+	define('HEIGHT_MAX', 2200);    // Hauteur max de l'image en pixels
+ 
+	$tabExt= array('jpg','gif','png','jpeg');
 	$infoImg = array();
 
 	$extention = '';
@@ -19,8 +23,8 @@
 	/************************************************************
 	* Creation du repertoire cible si inexistant
 	*************************************************************/
-	if( !is_dir(TARGET) ) {
-		if( !mkdir(TARGET, 0755) ) {
+	if( !is_dir('../'.TARGET) ) {
+		if( !mkdir('../'.TARGET, 0755) ) {
 			exit('Erreur : le répertoire cible ne peut-être créé ! Vérifiez que vous diposiez des droits suffisants pour le faire ou créez le manuellement !');
 		}
 	}
@@ -40,7 +44,7 @@
       			if($infosImg[2] >= 1 && $infosImg[2] <= 14)
       			{
         			// On verifie les dimensions et taille de l'image
-        			if(($infosImg[0] <= WIDTH_MAX) && ($infosImg[1] <= HEIGHT_MAX) && (filesize($_FILES['fichier']['tmp_name']) <= MAX_SIZE))
+        			if(($infosImg[0] <= WIDTH_MAX) && ($infosImg[1] <= HEIGHT_MAX) && (filesize($_FILES['image']['tmp_name']) <= MAX_SIZE))
         			{
           				// Parcours du tableau d'erreurs
           				if(isset($_FILES['image']['error']) 
@@ -50,7 +54,7 @@
             				$nomImage = md5(uniqid()) .'.'. $extension;
  
             				// Si c'est OK, on teste l'upload
-            				if(move_uploaded_file($_FILES['image']['tmp_name'], TARGET.$nomImage))
+            				if(move_uploaded_file($_FILES['image']['tmp_name'], '../'.TARGET.$nomImage))
             				{
               					$message = 'Upload réussi !';
             				}
@@ -88,11 +92,21 @@
 	}
 
 	$idPage = -1;
+	if(!empty($_FILES['image']['name']))
+	{
+		$pathImage = TARGET.$nomImage; 
 
-	$request = 'INSERT INTO page (id_scenario, numero, titre, texte) VALUES (?, ?, ?, ?);';
-	$stmt = $conn->prepare($request);
-	$stmt->bind_param("iiss", $idScenario, $numero, $titre, $situation);
-	$stmt->execute();
+		$request = 'INSERT INTO page (id_scenario, numero, titre, texte, image) VALUES (?, ?, ?, ? , ?);';
+		$stmt = $conn->prepare($request);
+		$stmt->bind_param("iisss", $idScenario, $numero, $titre, $situation, $pathImage);
+		$stmt->execute();
+	}else{
+		$request = 'INSERT INTO page (id_scenario, numero, titre, texte, image) VALUES (?, ?, ?, ?);';
+		$stmt = $conn->prepare($request);
+		$stmt->bind_param("iiss", $idScenario, $numero, $titre, $situation);
+		$stmt->execute();
+	}
+	
 
 	$selectID = 'SELECT id_page as id, titre FROM page GROUP BY id_page ORDER BY id_page DESC;';
 	$result = $conn->query($selectID);
@@ -112,7 +126,8 @@
 		$stmt->execute();
 	}
 
-	$conn->close();
+	$conn->close();	
+	header("Location: ../ajoutPage.php");
+	exit;
 
-	echo "OK";
 ?>

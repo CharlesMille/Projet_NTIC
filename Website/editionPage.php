@@ -21,7 +21,7 @@
 	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
 	<link type="text/css" rel="stylesheet" href="css/style.css"/>
 </head>
-<body>
+<body onload="init();">
 	<div class="alert alert-success" id="success-alert">
 	    <button type="button" class="close" data-dismiss="alert">x</button>
 	    <strong>La page a bien été mise à jour !</strong>
@@ -30,7 +30,7 @@
 	<div class="container">
 		<h3>Edition de la page</h3>
 		<br/>
-		<form class="form-horizontal" method="POST" id="formPage" action="php/editerPage.php">
+		<form class="form-horizontal" role="form" enctype="multipart/form-data" method="POST" id="formPage" action="php/editerPage.php">
 		<?php
 			if ($result->num_rows > 0)
 			{
@@ -39,6 +39,7 @@
 			    	$scenario = $row['id_scenario'];
 		?>
 			<input class="invisible abs" name="idPage" value="<?php echo $_GET['page']; ?>"/>
+			<input class="invisible abs" name="idScenar" type = 'number' value="<?php echo $scenario; ?>"/>
 			<div class="form-group">
 				<label class="control-label col-sm-2" for="titre">Titre :</label>
 				<div class="col-lg-6 col-sm-6 col-12">
@@ -49,7 +50,7 @@
 			<div class="form-group">
 				<label class="control-label col-sm-2" for="numero">Page n° :</label>
 				<div class="col-lg-6 col-sm-6 col-12">
-					<input class="form-control" id="numero" name="numero" type="number" placeholder="Numéro de la page" value="<?php echo $row['numero'] ?>"/>
+					<input class="form-control" id="numero" name="numero" type="number" placeholder="Numéro de la page" value="<?php echo $row['numero'] ?>" onchange ="putImage();"onload ="putImage();"/>
 				</div>
 			</div>
 
@@ -58,8 +59,17 @@
 				<div class="col-lg-6 col-sm-6 col-12">
 					<textarea class="form-control" id="situation" name="situation" type="text"><?php echo $row['texte'] ?></textarea>
 				</div>
-			</div>
+			</div>		
 			<br/>
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="image">image :</label>
+				<div class="col-lg-6 col-sm-6 col-12">
+					<input type ="file" class="form-control" id=image name="image" value ="<?php echo $row['image']?>" onchange="putImage()"/>
+					<br/>
+					<img id="img" src="<?php echo $row['image']?>" alt="Aperçu de l'image"/>
+				</div>				
+			</div>
+			</br>
 		<?php
 			$selectBouton = 'SELECT * FROM bouton WHERE id_page = '.$_GET['page'].';';
 			$resultBouton = $conn->query($selectBouton);
@@ -101,7 +111,7 @@
 				</div>
 
 				<div class="col-sm-8">
-					<input class="btn btn-lg btn-block btn-primary" id="modifier" value="Valider les modifications"/>
+					<input class="btn btn-lg btn-block btn-primary" id="modifier" value="Valider les modifications" type = "submit"/>
 				</div>
 			</div>
 		<?php
@@ -117,7 +127,7 @@
 </body>
 </html>
 
-
+<!--
 <script>
 	$(document).ready (function(){
 	    $("#success-alert").hide();
@@ -145,3 +155,4 @@
 		);
  	});
 </script>
+-->

@@ -37,10 +37,8 @@
 		?>
 		<h3><?php echo $rowPage['titre']?></h3>
 		</br>
-		<div class="row">
-			<div class="col-sm-6">
-				<img class = "scenar" src="<?php echo $rowPage['image']?>" alt="Image"></img>
-			</div>
+		<div class="row">			
+			<img class = "col-sm-6" src="<?php echo $rowPage['image']?>" alt="Image"></img>			
 
 			<div class="col-sm-6">
 				<span>

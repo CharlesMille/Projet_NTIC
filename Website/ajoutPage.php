@@ -102,7 +102,7 @@
 				</div>
 
 				<div class="col-sm-8">
-					<input class="btn btn-lg btn-block btn-primary" type="" id="ajouter" value="Ajouter la page au scénario"/>
+					<input class="btn btn-lg btn-block btn-primary" type="submit" id="ajouter" value="Ajouter la page au scénario"/>
 				</div>
 			</div>
 			<br/>
@@ -111,7 +111,7 @@
 	<?php include("contenu/footer.php"); ?>
 </body>
 </html>
-
+<!--
 <script>
 	$(document).ready (function(){
 	    $("#success-alert").hide();
@@ -147,3 +147,4 @@
 		);
  	});
 </script>
+-->
