@@ -11,7 +11,7 @@
 	session_start();
 	require_once("db.php");
 
-	$idScenario = $_SESSION['id'];
+	$idScenario = $_POST['idScenario'];
 	$titre = $_POST['titre'];
 	$situation = $_POST['situation'];
 	$nbBoutons = $_POST['nbBoutons'];

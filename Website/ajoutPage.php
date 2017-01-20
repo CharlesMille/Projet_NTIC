@@ -23,6 +23,8 @@
 		<h3>Ajouter une page au scénario :</h3>
 		<br/>
 		<form class="form-horizontal" role="form" enctype="multipart/form-data" method="POST" action="php/ajoutPage.php" id="formPage">
+			<input class="invisible abs" name="idScenario" value="<?php echo $_GET['scenario']; ?>"/>
+
 			<div class="form-group">
 				<label class="control-label col-sm-2" for="titre">Titre :</label>
 				<div class="col-lg-6 col-sm-6 col-12">
