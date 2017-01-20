@@ -68,6 +68,8 @@
 			    {
 		?>
 				<div class="row">
+					<input class="invisible abs" name="idBouton[]" value="<?php echo $rowBouton['id_bouton']; ?>"/>
+
 					<h3>Bouton n°<?php echo $i++; ?></h3>
 					<div class="col-sm-4">
 						<h4><input class="form-control" name="nomBouton[]" value="<?php echo $rowBouton['texte']; ?>"/></h4>
@@ -88,6 +90,7 @@
 			else
 				echo "Aucune page n'a été liée au scénario";
 		?>
+			<input class="invisible abs" name="nb" value="<?php echo ($i - 1); ?>"/>
 
 			<div class="row">
 				<div class="col-sm-4">
