@@ -94,6 +94,7 @@
 	}
 
 	$idPage = -1;
+	
 	if(!empty($_FILES['image']['name']))
 	{
 		$pathImage = TARGET.$nomImage; 
@@ -102,6 +103,7 @@
 		$stmt = $conn->prepare($request);
 		$stmt->bind_param("iissss", $idScenario, $numero, $titre, $situation, $requis, $pathImage);
 		$stmt->execute();
+		
 	}
 	else
 	{
