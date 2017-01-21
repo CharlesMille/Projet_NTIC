@@ -26,6 +26,7 @@
 	$nbBoutons = $_POST['nb'];
 	$flag = $_POST['flag'];
 	$score = $_POST['score'];
+	$requis = $_POST['requis'];
 
 	/************************************************************
 	* Creation du repertoire cible si inexistant
@@ -102,16 +103,16 @@
 
 	if(!empty($_FILES['image']['name']))
 	{
-		$sql = 'UPDATE page SET titre = ?, texte = ?, image = ?, numero = ? WHERE id_page = ?;';
+		$sql = 'UPDATE page SET titre = ?, texte = ?, image = ?, numero = ?, requis = ? WHERE id_page = ?;';
 		$stmt = $conn->prepare($sql);
-		$stmt->bind_param("sssii", $titre, $texte,$pathImage, $numero, $_POST['idPage']);
+		$stmt->bind_param("sssisi", $titre, $texte, $pathImage, $numero, $requis, $_POST['idPage']);
 		$stmt->execute();
 	}
 	else
 	{
-		$sql = 'UPDATE page SET titre = ?, texte = ?, numero = ? WHERE id_page = ?;';
+		$sql = 'UPDATE page SET titre = ?, texte = ?, numero = ?, requis = ? WHERE id_page = ?;';
 		$stmt = $conn->prepare($sql);
-		$stmt->bind_param("ssii", $titre, $texte, $numero, $_POST['idPage']);
+		$stmt->bind_param("ssisi", $titre, $texte, $numero, $requis, $_POST['idPage']);
 		$stmt->execute();
 	}
 

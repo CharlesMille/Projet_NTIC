@@ -23,7 +23,7 @@
 			<div class="form-group">
 				<label class="control-label col-sm-2" for="titre">Titre :</label>
 				<div class="col-lg-6 col-sm-6 col-12">
-					<input class="form-control" id="titre" name="titre" type="text" placeholder="Titre du scénario"/>
+					<input class="form-control" id="titre" name="titre" type="text" placeholder="Titre du scénario" required/>
 				</div>
 			</div>
 

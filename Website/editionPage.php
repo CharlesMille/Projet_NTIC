@@ -40,14 +40,14 @@
 			<div class="form-group">
 				<label class="control-label col-sm-2" for="titre">Titre :</label>
 				<div class="col-lg-6 col-sm-6 col-12">
-					<input class="form-control" id="titre" name="titre" type="text" placeholder="Titre du scénario" value="<?php echo $row['titre'] ?>"/>
+					<input class="form-control" id="titre" name="titre" type="text" placeholder="Titre du scénario" value="<?php echo $row['titre'] ?>"  required/>
 				</div>
 			</div>
 
 			<div class="form-group">
 				<label class="control-label col-sm-2" for="numero">Page n° :</label>
 				<div class="col-lg-6 col-sm-6 col-12">
-					<input class="form-control" id="numero" name="numero" type="number" placeholder="Numéro de la page" value="<?php echo $row['numero'] ?>" onchange ="putImage();"onload ="putImage();"/>
+					<input class="form-control" id="numero" name="numero" type="number" placeholder="Numéro de la page" value="<?php echo $row['numero'] ?>" onchange ="putImage();"onload ="putImage();" required/>
 				</div>
 			</div>
 

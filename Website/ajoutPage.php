@@ -25,14 +25,14 @@
 			<div class="form-group">
 				<label class="control-label col-sm-2" for="titre">Titre :</label>
 				<div class="col-lg-6 col-sm-6 col-12">
-					<input class="form-control" id="titre" name="titre" type="text" placeholder="Titre de la page"/>
+					<input class="form-control" id="titre" name="titre" type="text" placeholder="Titre de la page" required/>
 				</div>
 			</div>
 
 			<div class="form-group">
 				<label class="control-label col-sm-2" for="numero">Page n° :</label>
 				<div class="col-lg-6 col-sm-6 col-12">
-					<input class="form-control" id="numero" name="numero" type="number" placeholder="Numéro de la page"/>
+					<input class="form-control" id="numero" name="numero" type="number" placeholder="Numéro de la page" required/>
 				</div>
 			</div>
 
@@ -55,7 +55,7 @@
 			<div class="form-group">
 				<label class="control-label col-sm-2" for="requis">Variable requise pour accéder à la page :</label>
 				<div class="col-lg-6 col-sm-6 col-12">
-					<input class="form-control" id="requis" name="requis" type="text" value="<?php echo $row['requis'] ?>" placeholder="score:valeur OU variable"></input>
+					<input class="form-control" id="requis" name="requis" type="text" placeholder="score:valeur OU variable"></input>
 				</div>
 			</div>
 
@@ -66,7 +66,10 @@
 			<div class="form-group">
 				<label class="control-label col-sm-2" for="nbChoix">Nombre de choix :</label>
 				<div class="col-lg-6 col-sm-6 col-12">
-					<input class="form-control" type="number" name="nbBoutons" value="1" max="4" min="0" id="nbbtn" onchange="addChampText();"/>
+					<input class="form-control" type="number" name="nbBoutons" value="1" max="4" min="0" id="nbbtn"/>
+				</div>
+				<div class="col-lg-4 col-sm-4 col-12">
+					<input class="btn btn-block btn-success" type="button" value="Valider le nombre de boutons" onclick="addChampText();"/>
 				</div>
 			</div>
 

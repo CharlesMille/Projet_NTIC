@@ -35,7 +35,7 @@
 				while($row = $result->fetch_assoc())
 			    {
 		?>
-			<input class="invisible abs" name="idScenario" value="<?php echo $_GET['scenario']; ?>"/>
+			<input class="invisible abs" name="idScenario" value="<?php echo $_GET['scenario']; ?>" required/>
 			<div class="form-group">
 				<label class="control-label col-sm-2" for="titre">Titre :</label>
 				<div class="col-lg-6 col-sm-6 col-12">

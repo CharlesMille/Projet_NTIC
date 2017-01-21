@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Sam 21 Janvier 2017 à 12:45
+-- Généré le :  Sam 21 Janvier 2017 à 14:14
 -- Version du serveur :  5.7.14
 -- Version de PHP :  5.6.25
 
@@ -79,7 +79,7 @@ INSERT INTO `bouton` (`id_bouton`, `id_page`, `go_to_page`, `texte`, `flag`, `sc
 (70, 52, 22, 'Expliquer que Emma est atteinte de PTSD', NULL, 1),
 (71, 52, 23, 'Demander Ã  Emma de se concentrer', NULL, -3),
 (72, 53, 0, 'Recommencer ?', NULL, 0),
-(73, 54, 0, 'Recommencer ?', NULL, 0),
+(73, 54, 0, 'Recommencer ?', '', 0),
 (74, 55, 0, 'Recommencer ?', NULL, 0),
 (96, 67, 1, 'OK', '', 0),
 (97, 68, 24, 'Suite', '', 0),
@@ -171,7 +171,7 @@ INSERT INTO `page` (`id_page`, `id_scenario`, `numero`, `texte`, `image`, `titre
 (51, 12, 19, '<p><strong>Vous prenez les pi&egrave;ces que Emma et vous avez pr&eacute;par&eacute;. Tout y est, et vous pouvez commencer &agrave; remplir les papiers n&eacute;cessaires. La fonctionnaire vous pose des questions pour pouvoir faire vos passeports. </strong></p>\r\n\r\n<p><strong>Il est possible que les personnes atteintes de SPT d&eacute;veloppe des probl&egrave;mes de concentration. Il devient alors plus difficile pour eux de r&eacute;aliser une t&acirc;che du d&eacute;but &agrave; la fin. </strong></p>\r\n\r\n<p>Au bout de 5 minutes de questions, Emma commence &agrave; montrer des signes d&rsquo;impatience et de d&eacute;concentration. Elle met plus de temps &agrave; r&eacute;pondre, et s&rsquo;y reprend &agrave; plusieurs fois pour expliquer sa situation. La fonctionnaire semble perdre patience. Vous d&eacute;cidez alors de...</p>\r\n', 'ressources/3b3182761df0dd32af96c92c614692df.PNG', 'Etape 7 - a', 'formOK'),
 (52, 12, 19, '<p><strong>Vous prenez les pi&egrave;ces que Emma et vous avez pr&eacute;par&eacute;. Pendant que vous faites le point, vous vous rendez compte qu&rsquo;il manque le formulaire que Emma devait remplir. La fonctionnaire, bien que agac&eacute;e, vous permet de faire cela sur place. Cela prend du temps mais vous y arrivez. </strong></p>\r\n\r\n<p><strong>Il est possible que les personnes atteintes de SPT d&eacute;veloppe des probl&egrave;mes de concentration. Il devient alors plus difficile pour eux de r&eacute;aliser une t&acirc;che du d&eacute;but &agrave; la fin. </strong></p>\r\n\r\n<p>Au bout de 5 minutes de questions, Emma commence &agrave; montrer des signes d&rsquo;impatience et de d&eacute;concentration. Elle met plus de temps &agrave; r&eacute;pondre, et s&rsquo;y reprend &agrave; plusieurs fois pour expliquer sa situation. La fonctionnaire semble perdre patience. Vous d&eacute;cidez alors de...</p>\r\n', 'ressources/26d25ae7e9396d8b9272e515a7b370a7.PNG', 'Etape 7 - b', 'formNOK'),
 (53, 12, 24, '<p>Ce ne fut pas toujours facile, mais vous avez r&eacute;ussi &agrave; avoir tout ce qu&rsquo;il vous faut pour partir &agrave; Rio de Janeiro, au Br&eacute;sil. Ce fut une semaine extraordinaire, o&ugrave; Emma et vous avez pu enti&egrave;rement profiter des merveilles du Br&eacute;sil.</p>\r\n\r\n<p><strong>On peut donc voir qu&rsquo;il n&rsquo;est pas &eacute;vident de prendre soin d&rsquo;un proche qui est atteint d&rsquo;un syndrome post-traumatique. Cela implique de prendre des d&eacute;cisions et de trouver un &eacute;quilibre pour &agrave; la fois soutenir mais aussi laisser de la libert&eacute;. Le r&ocirc;le d&rsquo;un aidant n&rsquo;est pas simple et repr&eacute;sente un d&eacute;fi permanent.</strong></p>\r\n', 'ressources/cc2aaddb377018f4f34816ecfd00c707.PNG', 'Fin', NULL),
-(54, 12, 24, '<p><strong>Votre insistance &agrave; tout prendre en main a fortement contrari&eacute; Emma qui vous le fait clairement savoir. Elle vous dit que ce n&rsquo;est pas parce qu&rsquo;elle est atteinte d&rsquo;un syndrome qu&rsquo;elle est totalement incapable de prendre sa propre vie en main, et qu&rsquo;elle aimerait pouvoir respirer.</strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Vous vous disputez sur ce sujet, puis sur d&rsquo;autres et &agrave; force, vous vous rendez compte qu&rsquo;il vaudrait mieux &eacute;viter d&rsquo;aller au Br&eacute;sil dans ces conditions. Vous d&eacute;cidez ensemble de reporter le voyage &agrave; une date ult&eacute;rieure.</p>\r\n', 'ressources/ba0a2dc9571870b990a4474614aff68b.PNG', 'Dommage... Il va falloir rÃ©essayer !', 'score:>10'),
+(54, 12, 24, '<p><strong>Votre insistance &agrave; tout prendre en main a fortement contrari&eacute; Emma qui vous le fait clairement savoir. Elle vous dit que ce n&rsquo;est pas parce qu&rsquo;elle est atteinte d&rsquo;un syndrome qu&rsquo;elle est totalement incapable de prendre sa propre vie en main, et qu&rsquo;elle aimerait pouvoir respirer.</strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Vous vous disputez sur ce sujet, puis sur d&rsquo;autres et &agrave; force, vous vous rendez compte qu&rsquo;il vaudrait mieux &eacute;viter d&rsquo;aller au Br&eacute;sil dans ces conditions. Vous d&eacute;cidez ensemble de reporter le voyage &agrave; une date ult&eacute;rieure.</p>\r\n', 'ressources/ba0a2dc9571870b990a4474614aff68b.PNG', 'Dommage... Il va falloir rÃ©essayer !', 'score:>7'),
 (55, 12, 24, '<p><strong>Emma vous reproche d&rsquo;&ecirc;tre trop dur avec elle et de ne pas prendre en compte ses difficult&eacute;s. M&ecirc;me s&rsquo;il veut pouvoir &ecirc;tre ind&eacute;pendante, elle sait qu&rsquo;elle a besoin de votre aide et souhaite pouvoir compter sur vous quand elle en a besoin&hellip; Ce qui n&rsquo;a pas l&rsquo;air d&rsquo;&ecirc;tre le cas vu votre attitude. </strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Vous vous disputez sur ce sujet, puis sur d&rsquo;autres et &agrave; force, vous vous rendez compte qu&rsquo;il vaudrait mieux &eacute;viter d&rsquo;aller au Br&eacute;sil dans ces conditions. Vous d&eacute;cidez ensemble de reporter le voyage &agrave; une date ult&eacute;rieure.</p>\r\n', 'ressources/2e44b98fb716e19d9eb1f7f8d692fb8b.PNG', 'Dommage... Il va falloir rÃ©essayer !', 'score:<-7'),
 (67, 12, 0, '<p>Vous allez jouer &agrave; un jeu sur le mod&egrave;le du jeu dont vous &ecirc;tes le h&eacute;ros. Vous incarnez un proche d&rsquo;une personne en situation de handicap psychique. Dans le handicap psychique, les capacit&eacute;s intellectuelles (raisonnement, calcul etc.) sont indemnes et peuvent &eacute;voluer de mani&egrave;re satisfaisante. C&rsquo;est la possibilit&eacute; de les utiliser qui est d&eacute;ficiente. Les sympt&ocirc;mes sont instables, impr&eacute;visibles. De plus, la personne a du mal &agrave; s&rsquo;int&eacute;grer en soci&eacute;t&eacute; et &agrave; faire face &agrave; des situations variables.</p>\r\n\r\n<p>La personne a n&eacute;anmoins les capacit&eacute;s d&rsquo;effectuer des t&acirc;ches, des activit&eacute;s et de participer &agrave; la vie en soci&eacute;t&eacute;, mais avec des difficult&eacute;s et pourra avoir besoin d&rsquo;une aide.</p>\r\n\r\n<p>Vous allez donc avoir le r&ocirc;le d&rsquo;un proche de la personne. Votre r&ocirc;le est donc d&rsquo;accomplir une t&acirc;che avec elle, tout en r&eacute;agissant aux diff&eacute;rents sympt&ocirc;mes et cons&eacute;quences de son handicap. Il n&rsquo;y a pas de bonnes ou de mauvaises r&eacute;ponses, mais simplement des r&eacute;actions qui peuvent &ecirc;tre adapt&eacute;es ou non &agrave; la situation.</p>\r\n', 'ressources/', 'Avant-Propos', ''),
 (68, 12, 21, '<p><strong>Etant donn&eacute; que vous savez les papiers devant vous, vous prenez le relais d&rsquo;Emma pour r&eacute;pondre aux questions qui la concernent. La fonctionnaire semble surprise par votre initiative qui met de c&ocirc;t&eacute; une Emma irrit&eacute;e par votre comportement paternaliste.</strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Une fois les questions termin&eacute;es, la fonctionnaire vous dit avec en souriant que c&rsquo;est bon, et que vous recevrez vos passeports sous peu. Vous quittez la mairie, soulag&eacute;s d&rsquo;avoir enfin obtenu ce qu&rsquo;il vous fallait.</p>\r\n', 'ressources/3e7258643790e447940a72b35fe09065.PNG', 'Etape 8 - a', ''),
@@ -259,17 +259,17 @@ ALTER TABLE `scenario`
 -- AUTO_INCREMENT pour la table `bouton`
 --
 ALTER TABLE `bouton`
-  MODIFY `id_bouton` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=144;
+  MODIFY `id_bouton` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=145;
 --
 -- AUTO_INCREMENT pour la table `page`
 --
 ALTER TABLE `page`
-  MODIFY `id_page` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=103;
+  MODIFY `id_page` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=104;
 --
 -- AUTO_INCREMENT pour la table `scenario`
 --
 ALTER TABLE `scenario`
-  MODIFY `id_scenario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id_scenario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
