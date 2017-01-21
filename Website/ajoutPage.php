@@ -37,7 +37,7 @@
 			</div>
 
 			<div class="form-group">
-				<label class="control-label col-sm-2" for="image">Image n° :</label>
+				<label class="control-label col-sm-2" for="image">Image :</label>
 				<div class="col-lg-6 col-sm-6 col-12">
 					<input class="btn-sm" id="image" name="image" type="file" onchange ="putImage();"/>
 					<br/>
