@@ -1,8 +1,6 @@
 <?php
 	require_once("php/db.php");
 	require_once("php/fonctions.php");
-	$selectID = 'SELECT * FROM scenario WHERE id_scenario = '.$_GET['scenario'].';';
-	$result = $conn->query($selectID);
 
 	if ($_GET['page'] <= 2)
 	{
@@ -31,6 +29,13 @@
 	<div class="container">
 
 		<?php
+
+		$selectID = "SELECT * FROM scenario WHERE id_scenario = ?;";
+		$stmt = $conn->prepare($selectID);
+		$stmt->bind_param("i", $_GET['scenario']);
+		$stmt->execute();
+		$result = $stmt->get_result();
+
 		$affiche = false;
 
 		if ($result->num_rows > 0)
@@ -40,8 +45,11 @@
 		?>
 				<h1>Scénario : <?php echo $row['nom']?> </h1>        		
 		<?php
-				$selectPage = 'SELECT * FROM page WHERE id_scenario = '.$_GET['scenario'].' AND numero = '.$_GET['page'].' ORDER BY requis DESC;';
-				$resultPage = $conn->query($selectPage);
+				$selectPage = 'SELECT * FROM page WHERE id_scenario = ? AND numero = ? ORDER BY requis DESC;';
+				$stmt = $conn->prepare($selectPage);
+				$stmt->bind_param("ii", $_GET['scenario'], $_GET['page']);
+				$stmt->execute();
+				$resultPage = $stmt->get_result();
 
 				while($rowPage = $resultPage->fetch_assoc())
 				{
@@ -76,8 +84,8 @@
 										<input type="button" onclick="rediriger(this);" class="btn btn-block btn-lg btn-info btnScenar" redirScenar="scenario=<?php echo $row['id_scenario'];?>&page=<?php echo $rowButton['go_to_page'];?>" value = "<?php echo $rowButton['texte']?>" flag="<?php echo $rowButton['flag']; ?>" score="<?php echo $rowButton['score']; ?>"/>
 									</div>
 		<?php
-								}
-							else if($i%2 == 1)
+							}
+							else if($i % 2 == 1)
 							{
 		?>
 									<div class="col-sm-6">

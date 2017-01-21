@@ -14,7 +14,7 @@
 	<link type="text/css" rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
-	<?php include("contenu/header.php"); ?>	
+	<?php include("contenu/header.php"); ?>
 	<div class="container">
 		<h2>Handicap psychique : la question de l’accès aux soins, alcoolisme, suicide etc.</h2>
 		<br/>
@@ -22,10 +22,10 @@
 		<br/>
 		<div class="container">
 			<p>En France, 3% de la population est affectée par le handicap psychique. Ce handicap est encore mal connu du grand public.</p>
-			
+
 			<div class="row">
 				<div class="col-sm-1">
-					<img src="img/Logo-Psychique.jpg" alr="Logo handicap psychique" width="100%"/>
+					<img src="img/Logo-Psychique.jpg" alt="Logo handicap psychique" width="100%"/>
 				</div>
 
 				<div class="col-sm-11">
