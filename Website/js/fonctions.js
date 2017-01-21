@@ -40,7 +40,22 @@ function addChampText() {
     document.getElementById("boutons").innerHTML = '<div class="panel-group" id="accordion">';
 
     for (i = 1; i < nb + 1; i++) {
-        document.getElementById("boutons").innerHTML += '<div class="panel panel-default"> <div class="panel-heading"> <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#btn' + i + '">Bouton ' + i + '</a> </h4> </div> <div id="btn' + i + '" class="panel-collapse collapse ' + (i == 1 ? 'in' : '') + '"> <div class="panel-body"> <br/> <div class="form-group"> <label class="control-label col-sm-2">Réponse ' + i + ' :</label> <div class="col-lg-6 col-sm-6 col-12"> <input class="form-control" name="rep[]" type="text" placeholder="Réponse ' + i + '"/> </div> </div> <div class="form-group"> <label class="control-label col-sm-2">Lien vers la page du scénario n° :</label> <div class="col-lg-6 col-sm-6 col-12"> <input class="form-control" name="goToPage[]" type="number" value="0" min="0"/> </div> </div> </div> </div> </div>'; }
+        document.getElementById("boutons").innerHTML += '<div class="panel panel-default"> <div class="panel-heading"> <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#btn' + i + '">Bouton ' + i + '</a> </h4> </div> <div id="btn' + i + '" class="panel-collapse collapse ' + (i == 1 ? 'in' : '') + '"> <div class="panel-body"> <br/> <div class="form-group"> <label class="control-label col-sm-2">Réponse ' + i + ' :</label> <div class="col-lg-6 col-sm-6 col-12"> <input class="form-control" name="rep[]" type="text" placeholder="Réponse ' + i + '"/> </div> </div> <div class="form-group"> <label class="control-label col-sm-2">Lien vers la page du scénario n° :</label> <div class="col-lg-6 col-sm-6 col-12"> <input class="form-control" name="goToPage[]" type="number" value="0" min="0"/> </div> </div> <div class="form-group"> <label class="control-label col-sm-2">Donner variable :</label> <div class="col-lg-6 col-sm-6 col-12"> <input class="form-control" name="var[]" type="text"/> </div> </div> <div class="form-group"> <label class="control-label col-sm-2">Score donné :</label> <div class="col-lg-6 col-sm-6 col-12"> <input class="form-control" name="sco[]" type="number"/> </div> </div></div></div></div>'; 
+      }
 
     document.getElementById("boutons").innerHTML += '</div>';  
+}
+
+function rediriger(button)
+{
+  if (button.getAttribute('flag') != "")
+  {
+    var flag = button.getAttribute('flag');
+    setCookie('flags', flag + '|' + getCookie('flags'));
+  }
+
+  var score = button.getAttribute('score');
+  setCookie('score', parseInt(getCookie('score')) + parseInt(score));
+
+  window.location = 'pageScenario.php?' + button.getAttribute('redirScenar');
 }

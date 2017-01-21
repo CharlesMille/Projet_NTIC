@@ -42,7 +42,7 @@
 			<div class="form-group">
 				<label class="control-label col-sm-2" for="image">Image n° :</label>
 				<div class="col-lg-6 col-sm-6 col-12">
-					<input class="btn-sm" id="image" name="image" type="file" onchange ="putImage();"/>
+					<input class="btn-sm" id="image" name="fichier" type="file" onchange ="putImage();"/>
 					<br/>
 					<img id="img" src="#" alt="Aperçu de l'image"/>
 				</div>
@@ -52,6 +52,13 @@
 				<label class="control-label col-sm-2" for="situation">Texte décrivant la situation :</label>
 				<div class="col-lg-6 col-sm-6 col-12">
 					<textarea class="form-control" id="situation" name="situation" type="text"></textarea>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="requis">Variable requise pour accéder à la page :</label>
+				<div class="col-lg-6 col-sm-6 col-12">
+					<input class="form-control" id="requis" name="requis" type="text" value="<?php echo $row['requis'] ?>" placeholder="score:valeur OU variable"></input>
 				</div>
 			</div>
 
@@ -90,6 +97,20 @@
 										<input class="form-control" name="goToPage[]" type="number" value="0" min="0"/>
 									</div>
 								</div>
+
+								<div class="form-group">
+									<label class="control-label col-sm-2">Donner variable :</label>
+									<div class="col-lg-6 col-sm-6 col-12">
+										<input class="form-control" name="vari[]" type="text"/>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="control-label col-sm-2">Score donné :</label>
+									<div class="col-lg-6 col-sm-6 col-12">
+										<input class="form-control" name="sco[]" type="number"/>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -102,7 +123,7 @@
 				</div>
 
 				<div class="col-sm-8">
-					<input class="btn btn-lg btn-block btn-primary" type="" id="ajouter" value="Ajouter la page au scénario"/>
+					<input class="btn btn-lg btn-block btn-primary" id="ajouter" value="Ajouter la page au scénario"/>
 				</div>
 			</div>
 			<br/>

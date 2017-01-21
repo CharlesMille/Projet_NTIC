@@ -59,6 +59,13 @@
 					<textarea class="form-control" id="situation" name="situation" type="text"><?php echo $row['texte'] ?></textarea>
 				</div>
 			</div>
+
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="requis">Variable requise pour accéder à la page :</label>
+				<div class="col-lg-6 col-sm-6 col-12">
+					<input class="form-control" id="requis" name="requis" type="text" value="<?php echo $row['requis'] ?>" placeholder="score:valeur OU variable"></input>
+				</div>
+			</div>
 			<br/>
 		<?php
 			$selectBouton = 'SELECT * FROM bouton WHERE id_page = '.$_GET['page'].';';
