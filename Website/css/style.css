@@ -23,6 +23,15 @@
     font-size: 1.5em;
 }
 
+.footer a {
+    color: white;
+    font-size: 0.9em;
+}
+
+.footer a:hover {
+    color: lightgray;
+}
+
 .abs {
     position: absolute;
 }
