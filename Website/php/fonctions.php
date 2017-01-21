@@ -11,10 +11,14 @@
 		}
 		else
 		{
-			foreach (explode("|", $_COOKIE['flags']) as $f)
+			if ($_COOKIE['flags'] != "" || $_COOKIE['flags'] != "NULL" || $_COOKIE['flags'] != NULL)
 			{
-				if ($flag == $f)
-					$ret = true;
+			
+				foreach (explode("|", $_COOKIE['flags']) as $f)
+				{
+					if ($flag == $f)
+						$ret = true;
+				}
 			}
 		}
 
