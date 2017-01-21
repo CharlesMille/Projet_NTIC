@@ -1,3 +1,3 @@
 <footer class="footer">
-    Le handicap psychologique.
+    Le handicap psychique.
 </footer>
