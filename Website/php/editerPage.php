@@ -98,10 +98,20 @@
 
 	$pathImage = TARGET.$nomImage;
 
-	$sql = 'UPDATE page SET titre = ?, texte = ?, image = ?, numero = ? WHERE id_page = ?;';
-	$stmt = $conn->prepare($sql);
-	$stmt->bind_param("sssii", $titre, $texte,$pathImage, $numero, $_POST['idPage']);
-	$stmt->execute();
+	if(!empty($_FILES['image']['name']))
+	{
+		$sql = 'UPDATE page SET titre = ?, texte = ?, image = ?, numero = ? WHERE id_page = ?;';
+		$stmt = $conn->prepare($sql);
+		$stmt->bind_param("sssii", $titre, $texte,$pathImage, $numero, $_POST['idPage']);
+		$stmt->execute();
+	}
+	else
+	{
+		$sql = 'UPDATE page SET titre = ?, texte = ?, numero = ? WHERE id_page = ?;';
+		$stmt = $conn->prepare($sql);
+		$stmt->bind_param("ssii", $titre, $texte, $numero, $_POST['idPage']);
+		$stmt->execute();
+	}
 
 	for ($i = 0; $i < $nbBoutons; $i++)
 	{

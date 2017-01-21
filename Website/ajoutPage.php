@@ -7,6 +7,7 @@
 	<script type="text/javascript" src="js/libs/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="js/libs/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/fonctions.js"></script>
+	<script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
 	
 	<!-- Import CSS -->
 	<link type="text/css" rel="stylesheet" href="css/jquery-ui.css"/>
@@ -38,7 +39,7 @@
 			<div class="form-group">
 				<label class="control-label col-sm-2" for="image">Image n° :</label>
 				<div class="col-lg-6 col-sm-6 col-12">
-					<input class="btn-sm" id="image" name="fichier" type="file" onchange ="putImage();"/>
+					<input class="btn-sm" id="image" name="image" type="file" onchange ="putImage();"/>
 					<br/>
 					<img id="img" src="#" alt="Aperçu de l'image"/>
 				</div>
@@ -128,3 +129,4 @@
 	<?php include("contenu/footer.php"); ?>
 </body>
 </html>
+<script>CKEDITOR.replace('situation');</script>

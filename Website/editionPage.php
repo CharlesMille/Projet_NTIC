@@ -15,6 +15,7 @@
 	<script type="text/javascript" src="js/libs/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="js/libs/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/fonctions.js"></script>
+	<script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
 	
 	<!-- Import CSS -->
 	<link type="text/css" rel="stylesheet" href="css/jquery-ui.css"/>
@@ -130,3 +131,4 @@
 	<?php include("contenu/footer.php"); ?>
 </body>
 </html>
+<script>CKEDITOR.replace('situation');</script>
