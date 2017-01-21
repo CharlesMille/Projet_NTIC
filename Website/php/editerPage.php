@@ -24,6 +24,8 @@
 	if(!empty($_POST['goTo']))
 		$goTo = $_POST['goTo'];
 	$nbBoutons = $_POST['nb'];
+	$flag = $_POST['flag'];
+	$score = $_POST['score'];
 
 	/************************************************************
 	* Creation du repertoire cible si inexistant
@@ -115,9 +117,9 @@
 
 	for ($i = 0; $i < $nbBoutons; $i++)
 	{
-		$sqlBtn = 'UPDATE bouton SET texte = ?, go_to_page = ? WHERE id_bouton = ?;';
+		$sqlBtn = 'UPDATE bouton SET texte = ?, go_to_page = ?, flag = ?, score = ? WHERE id_bouton = ?;';
 		$stmt = $conn->prepare($sqlBtn);
-		$stmt->bind_param("sii", $noms[$i], $goTo[$i], $ids[$i]);
+		$stmt->bind_param("sisii", $noms[$i], $goTo[$i], $flag[$i], $score[$i], $ids[$i]);
 		$stmt->execute();
 	}
 

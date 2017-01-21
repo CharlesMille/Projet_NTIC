@@ -89,7 +89,12 @@
 					<input class="invisible abs" name="idBouton[]" value="<?php echo $rowBouton['id_bouton']; ?>"/>
 
 					<h3>Bouton n°<?php echo $i++; ?></h3>
-					<div class="col-sm-4">
+
+					<div class="col-sm-1">
+						<h4>Texte :</h4>
+					</div>
+
+					<div class="col-sm-3">
 						<h4><input class="form-control" name="nomBouton[]" value="<?php echo $rowBouton['texte']; ?>"/></h4>
 					</div>
 
@@ -97,8 +102,25 @@
 						<h4>Envoie vers la page n°</h4>
 					</div>
 
-					<div class="col-sm-1">
+					<div class="col-sm-2">
 						<h4><input class="form-control" type="number" name="goTo[]" value="<?php echo $rowBouton['go_to_page']; ?>"/></h4>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-2">
+						<h4>Variable obtenue si choisi :</h4>
+					</div>
+
+					<div class="col-sm-4">
+						<h4><input class="form-control" name="flag[]" value="<?php echo $rowBouton['flag']; ?>"/></h4>
+					</div>
+
+					<div class="col-sm-1">
+						<h4>Score :</h4>
+					</div>
+
+					<div class="col-sm-2">
+						<h4><input class="form-control" type="number" name="score[]" value="<?php echo $rowBouton['score']; ?>"/></h4>
 					</div>
 				</div>
 				<hr/>
