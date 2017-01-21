@@ -14,10 +14,6 @@
 	<link type="text/css" rel="stylesheet" href="css/style.css"/>
 </head>
 <body onload="init();">
-	<div class="alert alert-success" id="success-alert">
-	    <button type="button" class="close" data-dismiss="alert">x</button>
-	    <strong>La page a bien été ajoutée au scénario !</strong>
-	</div>
 	<?php include("contenu/header.php"); ?>	
 	<div class="container">
 		<h3>Ajouter une page au scénario :</h3>
@@ -123,7 +119,7 @@
 				</div>
 
 				<div class="col-sm-8">
-					<input class="btn btn-lg btn-block btn-primary" id="ajouter" value="Ajouter la page au scénario"/>
+					<input class="btn btn-lg btn-block btn-primary" type="submit" id="ajouter" value="Ajouter la page au scénario"/>
 				</div>
 			</div>
 			<br/>
@@ -132,39 +128,3 @@
 	<?php include("contenu/footer.php"); ?>
 </body>
 </html>
-
-<script>
-	$(document).ready (function(){
-	    $("#success-alert").hide();
-	    $("#ajouter").click(function(e) {
-	    		e.stopImmediatePropagation();
-
-	    		$.post(
-	    			"php/ajoutPage.php", 
-	    			$("#formPage").serialize(),
-			       	function(response) {
-			       		if (response == "OK")
-			       		{
-			       			$("#success-alert").alert();
-					        $("#success-alert").fadeTo(2000, 500).slideUp(500, function() {
-					       		$("#success-alert").slideUp(500);
-					        });
-
-					        $("#titre").val('');
-					        $("#numero").val('');
-					        $("#image").val('');
-					        $("#situation").val('');
-					        $("#nbbtn").val(1);
-
-					        addChampText();
-			       		}
-			       		else
-			       		{
-			       			alert("Erreur");
-			       		}
-			       	}
-			    );
-		    }
-		);
- 	});
-</script>

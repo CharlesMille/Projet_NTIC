@@ -30,6 +30,13 @@
 			{
 				while($row = $result->fetch_assoc())
 			    {
+			    	$minNum = 'SELECT MIN(numero) as min FROM page WHERE id_scenario = '.$row['id_scenario'];
+					$resMin = $conn->query($minNum);
+
+					if ($resMin->num_rows > 0) 
+					{
+						while($rowMin = $resMin->fetch_assoc())
+						{
 		?>
 				<div class="row">
 					<div class="col-sm-6">
@@ -37,7 +44,7 @@
 					</div>
 
 					<div class="col-sm-2">
-						<input class="btn btn-lg btn-block btn-success" type="button" value="Sélectionner" onclick="window.location='pageScenario.php?scenario=<?php echo $row['id_scenario']; ?>&page=1'"/>
+						<input class="btn btn-lg btn-block btn-success" type="button" value="Sélectionner" onclick="window.location='pageScenario.php?scenario=<?php echo $row['id_scenario']; ?>&page=<?php echo $rowMin['min']; ?>'"/>
 					</div>
 
 					<div class="col-sm-2">
@@ -50,6 +57,8 @@
 				</div>
 				<hr/>
 		<?php
+						}
+					}
 			    }
 			}
 			else
