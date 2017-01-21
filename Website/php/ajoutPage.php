@@ -132,5 +132,5 @@
 
 	$conn->close();	
 
-	header("Location: ../ajoutPage.php");
+	header("Location: ../ajoutPage.php?scenario=".$idScenario);
 ?>
