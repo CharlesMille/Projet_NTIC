@@ -84,6 +84,7 @@
 										<input type="button" onclick="rediriger(this);" class="btn btn-block btn-lg btn-info btnScenar" redirScenar="scenario=<?php echo $row['id_scenario'];?>&page=<?php echo $rowButton['go_to_page'];?>" value = "<?php echo $rowButton['texte']?>" flag="<?php echo $rowButton['flag']; ?>" score="<?php echo $rowButton['score']; ?>"/>
 									</div>
 								</div>
+								<br/>
 		<?php
 							}
 
