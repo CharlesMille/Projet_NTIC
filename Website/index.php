@@ -16,107 +16,89 @@
 <body>
 	<?php include("contenu/header.php"); ?>	
 	<div class="container">
-		<h2>Handicaps psychiques : la question de l’accès aux soins, alcoolisme, suicide etc.</h2>
+		<h2>Handicap psychique : la question de l’accès aux soins, alcoolisme, suicide etc.</h2>
 		<br/>
 		<h3>Qu'est ce qu'un handicap psychique ?</h3>
-		</br>
-		<div class ="row">
-			<div class = "col-sm-1">
-				<img src="img/Picto-handicap.gif" title = "picto handicap" width = 100%/>
+		<br/>
+		<div class="container">
+			<p>En France, 3% de la population est affectée par le handicap psychique. Ce handicap est encore mal connu du grand public.</p>
+			
+			<div class="row">
+				<div class="col-sm-1">
+					<img src="img/Logo-Psychique.jpg" alr="Logo handicap psychique" width="100%"/>
+				</div>
+
+				<div class="col-sm-11">
+					<p>Pour commencer, le handicap est constitué tout ce qui peut limiter la participation d'une personne à la vie en société. Tout ce qui peut la gêner dans son activité est également concerné. Nous possédons des fonctions physiques, sensorielles etc. qui peuvent parfois être altérées (accident, maladie). Nous sommes alors en situation de handicap dès lors que notre environnement n'est pas adapté à nos fonctions.</p>
+				</div>
 			</div>
-			<div class = "col-sm-11">
-				<p>D'après la loi du 11 février 2005 : ce qui constitue "<strong>un handicap</strong>", au sens de la présente loi, toute limitation d'activité ou restriction
-				de participation à la vie en société subie dans son environnement par une personne en raison d'une altération subtantielle, durable ou définie d'une ou plusieurs fonctions
-				<em>physique</em>, <em>sensorielles</em>, <em>mentalles</em>, <em>cognitive</em> ou <em>psychique</em>, d'un polyandicap ou trouble de santé invalidant.</p>
-			</div>
-		</div>
-		<p>Le handicap psychique est une notion récente dans la constitution française. Cette notion a été intégrée par la <em>loi sur le handicap du 11 février 2005</em>. Cette loi a été porté par 
-		l'association <a target="_blank" href ="http://www.unafam.org/">Unafam</a>. Elle a permit de <em>différencier</em> handicap mental et handicap psychique et permet donc un meilleur suivit pour les personnes souffrant
-		d'un handicap psychique.</p>
-		
-		<p>
-		<div class = "row">
-			<div class = "col-sm-1">
-				<img src="img/Picto-handicap-mental.gif" title = "picto handicap mental" width = 100%/>
-			</div>
-			<div class = "col-sm-11">
-				Le <strong>handicap mental</strong> est défini par l'Organisation modiale de la Santé comme un arrêt mental ou un développement mental incomplet, caractériq par une insufisance des facultés et du niveau global d'intelligence,
-				notement au niveau des fonctions cognitives, du langage, de la motricité et des performances sociales.La <string>trisomie 21 </strong>est l'une des formes les plus connues de handicap
-				mental. Il touche 1 à 3% de la population et majoritairement chez les garçons. Les causes du handicap sont multiples :
-			</div>
-		</div> 
+			
+			<p>Par exemple, les escaliers vont mettre en situation de handicap les personnes en fauteuil roulant, mais aussi celles en béquilles, ou avec une poussette. Il est important de proposer des alternatives pour tous les besoins.</p>
+			
+			<p>Le handicap psychique est défini par des difficultés pour une personne à accéder à toutes ses capacités. Cela peut concerner la concentration, la capacité à créer des relations etc. Par contre, elle conserve des facultés intellectuelles normales. La personne a donc du mal à s'intégrer en société et à faire face à des changements de son environnement. Médicalement, le handicap psychique peut être caractérisé par :
+			</p>
+
 			<ul>
-				<li><strong>à la conception:</strong> maladie génétique, aberration chrosommiques, ...</li>
-				<li><strong>pendant la grossesse:</strong> radiation, médicaments, virus, ...</li>
-				<li><strong>à la naissance:</strong> souffrance cérébrale du nouveau né, prématurité, ...</li>
-				<li><strong>après la naissance:</strong> maladie infectieuse, accident, axphyxies, ...</li>
-			</ul>   
-		</P>
+				<li>Etats psychotiques ou névrotiques</li>
+				<li>Troubles dépressifs graves</li>
+				<li>Etats limites</li>
+				<li>Troubles bipolaires</li>
+				<li>Troubles de la personnalité graves</li>
+			</ul>
 
-		<p>Le <strong>handicap psychique </strong>est défini par l'Unafam comme un déficit relationnel, des difficultés de concentratons, une grandee variabilité dans la possibillité d'utilisation des capacités alors que la personnne garde des facultés
-		intellectuelles normales. Le handicap psychique influt sur la pensée,  la perception, la communication, le comportement, l'humeur, la concience, la vigilence, le sommeil. 
-		Le handicap psychique est la conséquence directe des trobles psychique. Le handicape psychique est à la cause :
-		<ul>
-			<li>Etats psychotiques ou névrotiques</li>
-			<li>Troubles dépressifs graves</li>
-			<li>Etats limites</li>
-			<li>Troubles bipolaires</li>
-			<li>Troubles de la personnalités graves</li>			
-		</ul>
-		En France, <strong>3%</strong> de la population est affectée par ce handicap mal connu du grand publique. 
-		</p>
-		<p>Ce tableau montre quelques différences notables entre le handicap mental et psychique</p>
-		<div class="table-responsive">
-  			<table class="table table-bordered">
-				<tr>
-					<th>Aspects</th>
-					<th>Handicap mental</th>
-					<th>Handicap psychique</th>
-				</tr>
-				<tr>
-					<th>Caractère des troubles dans le temps</th>
-					<td>Stable</td>
-					<td>Evolutif</td>
-				</tr>
-				<tr>
-					<th>Déficience intellectuelle associée</th>
-					<td> Oui </td>
-					<td> Non </td>
-				</tr>
-				<tr>
-					<th>Prise en charge médicamenteuse</th>
-					<td>Très modérée</td>
-					<td>Souvent indispensable</td>
-				</tr>
-				<tr>
-					<th>Origine des troubles</th>
-					<td>Identifiée (traumatisme, anomalie génétique, etc.)</td>
-					<td>Non identifiée</td>
-				</tr>
-				<tr>
-					<th>Âge d'apparition des troubles</th>
-					<td>Naissance ou petite enfance (sauf dans le cas d'un accident ou un maladie)</td>
-					<td>Adolescence ou âge adulte</td>
-				</tr>
-			</table>
-		</div>
-		</br>
-		<h3>Le but du site</h3>
-		<p>Ce site a pour vocation de sensibilisé le publique au handicap psychique au travers de scénarios du type "<em>histoire dont vous êtes le héro</em>".</p>
+			<p>De plus, chacun de ses symptômes peut être associé avec les autres. Le handicap psychique est donc très difficile à caractériser précisément. Chaque cas est unique à la personne qui le vit et dépend de son entourage, de son environnement et de son passé.</p>
 
-		<p>Différent scénario vous sont présenté contenant des situation où vous incarnerez des personnages de l'entourage d'un homme ou d'une femme atteint d'un handicap psychique. Vos choix auront des influences dans l'histoire.
-		Pour chaque situation, des explications et incation sur la maladie vous seront données afin de sensibiliser sur le handicap psychique.</p>
-		<br/>
-		<div class="row">
-			<div class="col-sm-6">
-				<button class="btn btn-block btn-lg btn-info btnScenar" onclick = "window.location = 'listeScenario.php'">Liste des scénarios</button>
-			</div>
+			<p>Le handicap psychique est une notion récente dans la loi française, avec la loi sur le handicap du 11 février 2005. Cette loi a été portée par l'association Unafam (Union Nationale de Familles et Amis de personnes malades et / ou handicapées psychiques). Elle a permis de différencier handicap mental et handicap psychique et permet donc un meilleur suivi pour les personnes souffrant d'un handicap psychique.</p>
 
-			<div class="col-sm-6">
-				<button class="btn btn-block btn-lg btn-info btnScenar" onclick = "window.location = 'ajoutScenario.php'">Ajouter un scénario</button>
+			<div class="container">
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th>Aspects</th>
+							<th>Handicap mental</th>
+							<th>Handicap psychique</th>
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr>
+							<td>Caractère des symptômes dans le temps</td>
+							<td>Stable</td>
+							<td>Evolutif, variable</td>
+						</tr>
+
+						<tr>
+							<td>Déficience intellectuelle associée</td>
+							<td>Oui</td>
+							<td>Non - C'est la capacité à les utiliser qui peut être affectée</td>
+						</tr>
+
+						<tr>
+							<td>Prise en charge médicamenteuse</td>
+							<td>Très modérée</td>
+							<td>Souvent indispensable</td>
+						</tr>
+
+						<tr>
+							<td>Origine des troubles</td>
+							<td>Identifiée (traumatisme, anomalie génétique, etc.)</td>
+							<td>Généralement non identifiée. Cela peut provenir d'un traumatisme, de l'environnement ou d'autres raisons</td>
+						</tr>
+
+						<tr>
+							<td>Âge d'apparition des troubles</td>
+							<td>Naissance ou petite enfance (sauf dans le cas d'un accident ou un maladie)</td>
+							<td>Adolescence ou âge adulte</td>
+						</tr>
+					</tbody>
+				</table>
+				<br/>
+				<tr/>
+				<p>Ce site a pour vocation de sensibiliser le public au handicap psychique au travers de scénarios du type "Histoire dont vous êtes le héros".</p>
+				<p>Différents scénarios vous seront présentés contenant des situations où vous incarnerez des personnages de l'entourage d'un homme ou d'une femme en situation de handicap psychique. En tant qu'aidant, vos choix auront une influence sur la suite de l'histoire. Pour chaque situation, des explications et indications sur la maladie vous seront données afin de vous sensibiliser au handicap psychique et à ses conséquences.</p>
+				<br/>
 			</div>
 		</div>
-		<br/>
 	</div>
 	<?php include("contenu/footer.php"); ?>
 </body>
