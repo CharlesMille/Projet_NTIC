@@ -9,6 +9,7 @@
 <!DOCTYPE html>
 <head>
 	<title>Projet NTIC</title>
+	<link rel="shortcut icon" href="img/favicon.ico"/>
 
 	<!-- IMPORT JS -->
 	<script type="text/javascript" src="js/libs/jquery.min.js"></script>
@@ -18,7 +19,7 @@
 	<script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
 	
 	<!-- Import CSS -->
-	<link type="text/css" rel="stylesheet" href="css/jquery-ui.css"/>
+	<link type="text/css" rel="stylesheet" href="css/jquery-ui.min.css"/>
 	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
 	<link type="text/css" rel="stylesheet" href="css/style.css"/>
 </head>
