@@ -29,7 +29,7 @@
 				</div>
 
 				<div class="col-sm-11">
-					<p>Pour commencer, le handicap est constitué tout ce qui peut limiter la participation d'une personne à la vie en société. Tout ce qui peut la gêner dans son activité est également concerné. Nous possédons des fonctions physiques, sensorielles etc. qui peuvent parfois être altérées (accident, maladie). Nous sommes alors en situation de handicap dès lors que notre environnement n'est pas adapté à nos fonctions.</p>
+					<p>Pour commencer, le handicap est constitué de tout ce qui peut limiter la participation d'une personne à la vie en société. Tout ce qui peut la gêner dans son activité est également concerné. Nous possédons des fonctions physiques, sensorielles etc. qui peuvent parfois être altérées (accident, maladie). Nous sommes alors en situation de handicap dès lors que notre environnement n'est pas adapté à nos fonctions.</p>
 				</div>
 			</div>
 			
