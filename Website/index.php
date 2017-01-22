@@ -15,7 +15,7 @@
 </head>
 <body>
 	<?php include("contenu/header.php"); ?>
-	<div class="container">
+	<div class="container" id="contenu">
 		<h2>Handicap psychique : la question de l’accès aux soins, alcoolisme, suicide etc.</h2>
 		<br/>
 		<h3>Qu'est ce qu'un handicap psychique ?</h3>

@@ -17,11 +17,11 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.php">Le handicap psychique</a>
+      <span class="navbar-brand">Le handicap psychique</span>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav" id="navigation">
         <li <?php if ($nom == "index") echo 'class="active"'; ?>><a href="index.php">Accueil</a></li>
         <li <?php if ($nom == "listeScenario") echo 'class="active"'; ?>><a href="listeScenario.php">Liste des scénarios</a></li>        
         <li <?php if ($nom == "ajoutScenario") echo 'class="active"'; ?>><a href="ajoutScenario.php">Ajout d'un scénario</a></li>

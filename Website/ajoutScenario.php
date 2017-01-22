@@ -16,7 +16,7 @@
 <body>
 	<?php include("contenu/header.php"); ?>
 
-	<div class="container">
+	<div class="container" id="contenu">
 		<h3>Ajouter un nouveau scénario :</h3>
 		<br/>
 		<form class="form-horizontal" method="POST" action="php/ajoutScenario.php">

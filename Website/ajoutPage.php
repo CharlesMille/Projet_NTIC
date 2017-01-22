@@ -16,7 +16,7 @@
 </head>
 <body onload="init();">
 	<?php include("contenu/header.php"); ?>	
-	<div class="container">
+	<div class="container" id="contenu">
 		<h3>Ajouter une page au scénario :</h3>
 		<br/>
 		<form class="form-horizontal" role="form" enctype="multipart/form-data" method="POST" action="php/ajoutPage.php" id="formPage">
@@ -108,7 +108,7 @@
 								<div class="form-group">
 									<label class="control-label col-sm-2">Score donné :</label>
 									<div class="col-lg-6 col-sm-6 col-12">
-										<input class="form-control" name="sco[]" type="number"/>
+										<input class="form-control" name="sco[]" type="number" value="0"/>
 									</div>
 								</div>
 							</div>

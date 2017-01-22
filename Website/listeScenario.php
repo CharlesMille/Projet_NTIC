@@ -21,7 +21,7 @@
 </head>
 <body>
 	<?php include("contenu/header.php"); ?>	
-	<div class="container">
+	<div class="container" id="contenu">
 		<h3>Liste des scénarios</h3>
 		<br/>
 		<div id="liste">

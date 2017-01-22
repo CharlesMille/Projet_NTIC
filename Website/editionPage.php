@@ -24,7 +24,7 @@
 </head>
 <body onload="init();">
 	<?php include("contenu/header.php"); ?>	
-	<div class="container">
+	<div class="container" id="contenu">
 		<h3>Edition de la page</h3>
 		<br/>
 		<form class="form-horizontal" role="form" enctype="multipart/form-data" method="POST" id="formPage" action="php/editerPage.php">

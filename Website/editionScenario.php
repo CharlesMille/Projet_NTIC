@@ -25,7 +25,7 @@
 	    <strong>La page a bien été mise à jour !</strong>
 	</div>
 	<?php include("contenu/header.php"); ?>	
-	<div class="container">
+	<div class="container" id="contenu">
 		<h3>Edition du scénario</h3>
 		<br/>
 		<form class="form-horizontal" method="POST" id="formPage" action="php/editerScenario.php">
