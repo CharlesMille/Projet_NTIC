@@ -5,6 +5,7 @@
 	$dbName = "db_ntic";
 
 	$conn = new mysqli($servername, $username, $password, $dbName);
+	$stmt = mysqli_;
 
 	if ($conn->connect_error) 
 	{
